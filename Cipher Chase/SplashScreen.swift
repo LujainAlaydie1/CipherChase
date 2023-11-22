@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SplashScreen: View {
     @State private var screenSize: CGSize = .zero
     @State private var orientation: UIDeviceOrientation = UIDevice.current.orientation
 
@@ -31,6 +31,7 @@ struct ContentView: View {
                         .position(x: geometry.size.width / 2, y: (geometry.size.height / 2) - 50)
                     Text("Cipher Chase")
                         .foregroundColor(Color.white)
+                        .font(Font.custom("PixelifySans-Bold", size: 32))
                         .alignmentGuide(HorizontalAlignment.center) { _ in 50 }
                         .position(x: geometry.size.width / 2, y: (geometry.size.height / 2) + 30)
                 }
@@ -67,7 +68,7 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    SplashScreen()
 }
 
 struct LogoView: View {

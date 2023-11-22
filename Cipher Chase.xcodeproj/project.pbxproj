@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */; };
-		247DDE9C2B0E3B0500BDDCEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE9B2B0E3B0500BDDCEC /* ContentView.swift */; };
+		247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */; };
 		247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */; };
 		247DDEA12B0E3B0600BDDCEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247DDEA02B0E3B0600BDDCEC /* Preview Assets.xcassets */; };
 		247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEAA2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift */; };
 		247DDEB52B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEB42B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift */; };
 		247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */; };
+		24DA7A312B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
+		24DA7A322B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
+		24DA7A332B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		247DDE962B0E3B0500BDDCEC /* Cipher Chase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Chase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseApp.swift; sourceTree = "<group>"; };
-		247DDE9B2B0E3B0500BDDCEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		247DDEA02B0E3B0600BDDCEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		247DDEA62B0E3B0600BDDCEC /* Cipher ChaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipher ChaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,8 @@
 		247DDEB02B0E3B0600BDDCEC /* Cipher ChaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipher ChaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247DDEB42B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseUITests.swift; sourceTree = "<group>"; };
 		247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelifySans-Bold.ttf"; path = "../../../Downloads/Pixelify_Sans/static/PixelifySans-Bold.ttf"; sourceTree = "<group>"; };
+		24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cipher-Chase-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
+				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
 				247DDEA92B0E3B0600BDDCEC /* Cipher ChaseTests */,
 				247DDEB32B0E3B0600BDDCEC /* Cipher ChaseUITests */,
@@ -94,8 +100,9 @@
 		247DDE982B0E3B0500BDDCEC /* Cipher Chase */ = {
 			isa = PBXGroup;
 			children = (
+				24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */,
 				247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */,
-				247DDE9B2B0E3B0500BDDCEC /* ContentView.swift */,
+				247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */,
 				247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */,
 				247DDE9F2B0E3B0600BDDCEC /* Preview Content */,
 			);
@@ -125,6 +132,14 @@
 				247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */,
 			);
 			path = "Cipher ChaseUITests";
+			sourceTree = "<group>";
+		};
+		24DA7A2F2B0EA55E00AB24EB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				247DDEA12B0E3B0600BDDCEC /* Preview Assets.xcassets in Resources */,
+				24DA7A312B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
 				247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA7A322B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA7A332B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				247DDE9C2B0E3B0500BDDCEC /* ContentView.swift in Sources */,
+				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,11 +443,11 @@
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cipher-Chase-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +472,11 @@
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cipher-Chase-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
