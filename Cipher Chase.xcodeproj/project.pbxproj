@@ -17,6 +17,10 @@
 		24DA7A312B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
 		24DA7A322B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
 		24DA7A332B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
+		24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
+		24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
+		24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
+		24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelifySans-Bold.ttf"; path = "../../../Downloads/Pixelify_Sans/static/PixelifySans-Bold.ttf"; sourceTree = "<group>"; };
 		24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cipher-Chase-Info.plist"; sourceTree = SOURCE_ROOT; };
+		24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoStruct.swift; sourceTree = "<group>"; };
+		24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scenarioPageTask5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
+				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
 				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
 				247DDEA92B0E3B0600BDDCEC /* Cipher ChaseTests */,
@@ -102,6 +109,7 @@
 			children = (
 				24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */,
 				247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */,
+				24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */,
 				247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */,
 				247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */,
 				247DDE9F2B0E3B0600BDDCEC /* Preview Content */,
@@ -140,6 +148,14 @@
 				24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		24DA7A392B0F7D4700AB24EB /* SVGStructures */ = {
+			isa = PBXGroup;
+			children = (
+				24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */,
+			);
+			path = SVGStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
+				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */,
+				24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */,
 				247DDEB52B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift in Sources */,
 			);
