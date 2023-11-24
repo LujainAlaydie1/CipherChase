@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct SplashScreen: View {
-    @State private var screenSize: CGSize = .zero
-    @State private var orientation: UIDeviceOrientation = UIDevice.current.orientation
 
     var body: some View {
         ZStack {

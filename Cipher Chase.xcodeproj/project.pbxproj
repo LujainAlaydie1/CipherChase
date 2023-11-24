@@ -21,6 +21,15 @@
 		24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
 		24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
 		24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */; };
+		24DA7A902B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */; };
+		24DA7A912B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */; };
+		24DA7A922B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */; };
+		24DA7A942B10C5F200AB24EB /* frameStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A932B10C5F200AB24EB /* frameStruct.swift */; };
+		24DA7A952B10C5F200AB24EB /* frameStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A932B10C5F200AB24EB /* frameStruct.swift */; };
+		24DA7A962B10C5F200AB24EB /* frameStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A932B10C5F200AB24EB /* frameStruct.swift */; };
+		24DA7A982B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
+		24DA7A992B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
+		24DA7A9A2B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,9 @@
 		24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cipher-Chase-Info.plist"; sourceTree = SOURCE_ROOT; };
 		24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoStruct.swift; sourceTree = "<group>"; };
 		24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scenarioPageTask5.swift; sourceTree = "<group>"; };
+		24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AnonymousPro-Regular.ttf"; path = "../../../Downloads/Anonymous_Pro/AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
+		24DA7A932B10C5F200AB24EB /* frameStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frameStruct.swift; sourceTree = "<group>"; };
+		24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelifySans-Regular.ttf"; path = "../../../Downloads/Pixelify_Sans/static/PixelifySans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,7 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
+				24DA7A932B10C5F200AB24EB /* frameStruct.swift */,
 				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
 				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
@@ -145,6 +158,8 @@
 		24DA7A2F2B0EA55E00AB24EB /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */,
+				24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */,
 				24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */,
 			);
 			path = Font;
@@ -263,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				247DDEA12B0E3B0600BDDCEC /* Preview Assets.xcassets in Resources */,
+				24DA7A982B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */,
+				24DA7A902B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */,
 				24DA7A312B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
 				247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */,
 			);
@@ -273,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DA7A322B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
+				24DA7A992B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */,
+				24DA7A912B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DA7A332B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
+				24DA7A9A2B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */,
+				24DA7A922B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
+				24DA7A942B10C5F200AB24EB /* frameStruct.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
@@ -304,6 +326,7 @@
 			files = (
 				247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */,
 				24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
+				24DA7A952B10C5F200AB24EB /* frameStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA7A962B10C5F200AB24EB /* frameStruct.swift in Sources */,
 				24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */,
 				247DDEB52B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift in Sources */,
@@ -475,9 +499,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lujainalaydie.Cipher-Chase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -504,9 +531,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lujainalaydie.Cipher-Chase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

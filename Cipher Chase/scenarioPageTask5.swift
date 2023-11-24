@@ -8,53 +8,115 @@
 import SwiftUI
 
 struct scenarioPageTask5: View {
-    @State private var screenSize: CGSize = .zero
-    @State private var orientation: UIDeviceOrientation = UIDevice.current.orientation
+    @State private var someText = ""
+    @State var animateTitle: String = ""
+    @State var finalText: String = "Prepare, Decoders, for the Binary Battle awaits.In this realm  of zeros and ones, Decode my binary message to reveal a seven-letter word. Your coding prowess is your weapon, let the unraveling begin. Type the decrypted word to unlock the secrets within the domain."
+    
+    @State var indexValue = 0
+    @State var timeInterval: TimeInterval = 0.1
+    
+    
+    func startAnimation(){
+        Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { timer in
+            if indexValue < finalText.count{
+                animateTitle += String(finalText[finalText.index(finalText.startIndex,offsetBy: indexValue)])
+
+                indexValue += 1
+            }else{
+                timer.invalidate()
+            }
+        }
+    }
     
     var body: some View {
+        
         ZStack {
             Color(.background)
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-
                 GeometryReader { geometry in
-                    Text("Prepare, Decoders, for the Binary Battle awaits. In this realm of zeros and ones, Decode my binary message to reveal a seven-letter word. Your coding prowess is your weapon, let the unraveling begin. Type the decrypted word to unlock the secrets within The Phoenix's domain.")
+                        Text(animateTitle)
                         .font(Font.custom("PixelifySans-Bold", size: 16))
-                        .position(x: geometry.size.width * 0.36, y: 180)
+                        .padding(.horizontal)
+                        .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
+                        .padding([.leading, .trailing]) // Adjust padding as needed
+                        .multilineTextAlignment(.leading)
                         .foregroundColor(.white)
-                        .padding([.leading, .trailing], 20)
-                        
-                }
-                Spacer()
+                        .onAppear{
+                            startAnimation()
+                        }
 
-                Image("ones")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 200)
-            }
-            .onAppear {
-                // Capture the original screen size when the view appears
-                screenSize = UIScreen.main.bounds.size
-                // Subscribe to orientation changes
-                NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification, object: nil, queue: .main) { _ in
-                    orientation = UIDevice.current.orientation
+                }
+                GeometryReader { geometry in
+                    ZStack{
+                        ZStack{
+                            
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color(white: 1, opacity: 0.14))
+                                .padding([.leading, .trailing]) // Adjust padding as needed
+                                .frame(width: geometry.size.width, height: geometry.size.height + 40)
+
+                        
+                        VStack{
+                            HStack{
+                                frameStruct(someText: " ", binary: "01010000")
+                            }
+                            HStack{
+                                frameStruct(someText: " ", binary: "01101000")
+                            }
+                            HStack{
+                                frameStruct(someText: " ", binary: "01101111")
+                            }
+                            HStack{
+                                frameStruct(someText: " ", binary: "01100101")
+                            }
+                            HStack{
+                                frameStruct(someText: " ", binary: "01101110")
+                            }
+                            HStack{
+                                frameStruct(someText: " ", binary: "01101001")
+                            }
+                            HStack{
+                                frameStruct(someText: " ", binary: "01111000")
+                            }
+                            .padding(.bottom)
+
+                        }
+                        
+                    }
+                        .offset(y: -(geometry.size.height / 2.3))  // Adjust the value based on how much you want to lift it up
+                }
+                    
+                    
+                    
+                        Image("ones")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 200)
+                            .offset(y:130)
+                            .allowsHitTesting(false)  // Disable user interaction
+
+                            
                 }
             }
-            .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
-                // Handle orientation changes here
-                if orientation.isPortrait || orientation.isLandscape  || orientation.isFlat {
-                    // Maintain the original size on rotation
-                    screenSize = UIScreen.main.bounds.size
-                }
-            }
-            .frame(width: screenSize.width, height: screenSize.height) // Maintain the size
             .contentShape(Rectangle())
         }
     }
+    
+    
+
 }
+
 
 
 #Preview {
     scenarioPageTask5()
+}
+
+
+extension String {
+    subscript(offset: Int) -> Character {
+        self[index(startIndex, offsetBy: offset)]
+    }
 }
