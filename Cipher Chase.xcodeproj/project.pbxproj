@@ -45,6 +45,7 @@
 		24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
 		24E9DCDF2B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
 		24E9DCE02B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
+		A5B75B9E2B13854800306219 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B75B9D2B13854800306219 /* MainPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		24E9DCC42B11B106005E6D56 /* phoenix.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = phoenix.gif; path = ../../Downloads/phoenix.gif; sourceTree = "<group>"; };
 		24E9DCD62B11B5D4005E6D56 /* gifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifView.swift; sourceTree = "<group>"; };
 		24E9DCDA2B11B87A005E6D56 /* sparkles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkles.swift; sourceTree = "<group>"; };
+		A5B75B9D2B13854800306219 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */,
 				247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */,
 				247DDE9F2B0E3B0600BDDCEC /* Preview Content */,
+				A5B75B9D2B13854800306219 /* MainPage.swift */,
 			);
 			path = "Cipher Chase";
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				24DA7A942B10C5F200AB24EB /* frameStruct.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
+				A5B75B9E2B13854800306219 /* MainPage.swift in Sources */,
 				24E9DCAC2B117487005E6D56 /* winframeStruct.swift in Sources */,
 				24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
