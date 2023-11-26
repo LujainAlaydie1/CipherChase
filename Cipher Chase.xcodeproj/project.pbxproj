@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10B52B582B0F93A20002962C /* task4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B52B572B0F93A20002962C /* task4.swift */; };
+		10B52B5C2B0F9A230002962C /* taskmaha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B52B5B2B0F9A230002962C /* taskmaha.swift */; };
 		247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */; };
 		247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */; };
 		247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10B52B572B0F93A20002962C /* task4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task4.swift; sourceTree = "<group>"; };
+		10B52B5B2B0F9A230002962C /* taskmaha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskmaha.swift; sourceTree = "<group>"; };
 		247DDE962B0E3B0500BDDCEC /* Cipher Chase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Chase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseApp.swift; sourceTree = "<group>"; };
 		247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
+				10B52B5B2B0F9A230002962C /* taskmaha.swift */,
+				10B52B572B0F93A20002962C /* task4.swift */,
 				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
 				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
@@ -293,6 +299,8 @@
 			files = (
 				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
+				10B52B582B0F93A20002962C /* task4.swift in Sources */,
+				10B52B5C2B0F9A230002962C /* taskmaha.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
 			);
