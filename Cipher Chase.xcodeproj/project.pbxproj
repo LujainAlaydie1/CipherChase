@@ -14,6 +14,7 @@
 		247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEAA2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift */; };
 		247DDEB52B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEB42B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift */; };
 		247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */; };
+		24A4C4002B123727006701A7 /* endScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C3FF2B123727006701A7 /* endScenario.swift */; };
 		24DA7A312B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
 		24DA7A322B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
 		24DA7A332B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */; };
@@ -30,6 +31,20 @@
 		24DA7A982B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
 		24DA7A992B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
 		24DA7A9A2B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
+		24E9DCAA2B114F84005E6D56 /* winTask5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCA92B114F84005E6D56 /* winTask5.swift */; };
+		24E9DCAC2B117487005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
+		24E9DCAF2B119E93005E6D56 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E9DCAE2B119E93005E6D56 /* FLAnimatedImage */; };
+		24E9DCB12B119EB3005E6D56 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E9DCB02B119EB3005E6D56 /* FLAnimatedImage */; };
+		24E9DCB32B119EBF005E6D56 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E9DCB22B119EBF005E6D56 /* FLAnimatedImage */; };
+		24E9DCC52B11B106005E6D56 /* phoenix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24E9DCC42B11B106005E6D56 /* phoenix.gif */; };
+		24E9DCC62B11B106005E6D56 /* phoenix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24E9DCC42B11B106005E6D56 /* phoenix.gif */; };
+		24E9DCC72B11B106005E6D56 /* phoenix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24E9DCC42B11B106005E6D56 /* phoenix.gif */; };
+		24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCD62B11B5D4005E6D56 /* gifView.swift */; };
+		24E9DCDB2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
+		24E9DCDC2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
+		24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
+		24E9DCDF2B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
+		24E9DCE02B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +75,7 @@
 		247DDEB02B0E3B0600BDDCEC /* Cipher ChaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipher ChaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247DDEB42B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseUITests.swift; sourceTree = "<group>"; };
 		247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		24A4C3FF2B123727006701A7 /* endScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endScenario.swift; sourceTree = "<group>"; };
 		24DA7A302B0EA5B400AB24EB /* PixelifySans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelifySans-Bold.ttf"; path = "../../../Downloads/Pixelify_Sans/static/PixelifySans-Bold.ttf"; sourceTree = "<group>"; };
 		24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cipher-Chase-Info.plist"; sourceTree = SOURCE_ROOT; };
 		24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoStruct.swift; sourceTree = "<group>"; };
@@ -67,6 +83,11 @@
 		24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AnonymousPro-Regular.ttf"; path = "../../../Downloads/Anonymous_Pro/AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
 		24DA7A932B10C5F200AB24EB /* frameStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frameStruct.swift; sourceTree = "<group>"; };
 		24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelifySans-Regular.ttf"; path = "../../../Downloads/Pixelify_Sans/static/PixelifySans-Regular.ttf"; sourceTree = "<group>"; };
+		24E9DCA92B114F84005E6D56 /* winTask5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winTask5.swift; sourceTree = "<group>"; };
+		24E9DCAB2B117487005E6D56 /* winframeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winframeStruct.swift; sourceTree = "<group>"; };
+		24E9DCC42B11B106005E6D56 /* phoenix.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = phoenix.gif; path = ../../Downloads/phoenix.gif; sourceTree = "<group>"; };
+		24E9DCD62B11B5D4005E6D56 /* gifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifView.swift; sourceTree = "<group>"; };
+		24E9DCDA2B11B87A005E6D56 /* sparkles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E9DCAF2B119E93005E6D56 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E9DCB12B119EB3005E6D56 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E9DCB32B119EBF005E6D56 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +121,8 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
-				24DA7A932B10C5F200AB24EB /* frameStruct.swift */,
+				24E9DCDE2B11C336005E6D56 /* sstructs */,
+				24E9DCC42B11B106005E6D56 /* phoenix.gif */,
 				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
 				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
@@ -121,8 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */,
+				24E9DCD62B11B5D4005E6D56 /* gifView.swift */,
 				247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */,
+				24A4C3FF2B123727006701A7 /* endScenario.swift */,
 				24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */,
+				24E9DCA92B114F84005E6D56 /* winTask5.swift */,
 				247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */,
 				247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */,
 				247DDE9F2B0E3B0600BDDCEC /* Preview Content */,
@@ -169,8 +197,18 @@
 			isa = PBXGroup;
 			children = (
 				24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */,
+				24E9DCDA2B11B87A005E6D56 /* sparkles.swift */,
 			);
 			path = SVGStructures;
+			sourceTree = "<group>";
+		};
+		24E9DCDE2B11C336005E6D56 /* sstructs */ = {
+			isa = PBXGroup;
+			children = (
+				24DA7A932B10C5F200AB24EB /* frameStruct.swift */,
+				24E9DCAB2B117487005E6D56 /* winframeStruct.swift */,
+			);
+			path = sstructs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +227,9 @@
 			dependencies = (
 			);
 			name = "Cipher Chase";
+			packageProductDependencies = (
+				24E9DCAE2B119E93005E6D56 /* FLAnimatedImage */,
+			);
 			productName = "Cipher Chase";
 			productReference = 247DDE962B0E3B0500BDDCEC /* Cipher Chase.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +248,9 @@
 				247DDEA82B0E3B0600BDDCEC /* PBXTargetDependency */,
 			);
 			name = "Cipher ChaseTests";
+			packageProductDependencies = (
+				24E9DCB02B119EB3005E6D56 /* FLAnimatedImage */,
+			);
 			productName = "Cipher ChaseTests";
 			productReference = 247DDEA62B0E3B0600BDDCEC /* Cipher ChaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -225,6 +269,9 @@
 				247DDEB22B0E3B0600BDDCEC /* PBXTargetDependency */,
 			);
 			name = "Cipher ChaseUITests";
+			packageProductDependencies = (
+				24E9DCB22B119EBF005E6D56 /* FLAnimatedImage */,
+			);
 			productName = "Cipher ChaseUITests";
 			productReference = 247DDEB02B0E3B0600BDDCEC /* Cipher ChaseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -241,13 +288,16 @@
 				TargetAttributes = {
 					247DDE952B0E3B0500BDDCEC = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 					247DDEA52B0E3B0600BDDCEC = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = 247DDE952B0E3B0500BDDCEC;
 					};
 					247DDEAF2B0E3B0600BDDCEC = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = 247DDE952B0E3B0500BDDCEC;
 					};
 				};
@@ -261,6 +311,9 @@
 				Base,
 			);
 			mainGroup = 247DDE8D2B0E3B0500BDDCEC;
+			packageReferences = (
+				24E9DCAD2B119E93005E6D56 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+			);
 			productRefGroup = 247DDE972B0E3B0500BDDCEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +332,7 @@
 			files = (
 				247DDEA12B0E3B0600BDDCEC /* Preview Assets.xcassets in Resources */,
 				24DA7A982B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */,
+				24E9DCC52B11B106005E6D56 /* phoenix.gif in Resources */,
 				24DA7A902B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */,
 				24DA7A312B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
 				247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */,
@@ -291,6 +345,7 @@
 			files = (
 				24DA7A322B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
 				24DA7A992B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */,
+				24E9DCC62B11B106005E6D56 /* phoenix.gif in Resources */,
 				24DA7A912B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +356,7 @@
 			files = (
 				24DA7A332B0EA5B400AB24EB /* PixelifySans-Bold.ttf in Resources */,
 				24DA7A9A2B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */,
+				24E9DCC72B11B106005E6D56 /* phoenix.gif in Resources */,
 				24DA7A922B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,8 +371,13 @@
 				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				24DA7A942B10C5F200AB24EB /* frameStruct.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
+				24E9DCAC2B117487005E6D56 /* winframeStruct.swift in Sources */,
+				24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
+				24E9DCDB2B11B87A005E6D56 /* sparkles.swift in Sources */,
+				24A4C4002B123727006701A7 /* endScenario.swift in Sources */,
+				24E9DCAA2B114F84005E6D56 /* winTask5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +387,9 @@
 			files = (
 				247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */,
 				24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
+				24E9DCE02B11C348005E6D56 /* winframeStruct.swift in Sources */,
 				24DA7A952B10C5F200AB24EB /* frameStruct.swift in Sources */,
+				24E9DCDC2B11B87A005E6D56 /* sparkles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +397,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */,
 				24DA7A962B10C5F200AB24EB /* frameStruct.swift in Sources */,
 				24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
+				24E9DCDF2B11C348005E6D56 /* winframeStruct.swift in Sources */,
 				247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */,
 				247DDEB52B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift in Sources */,
 			);
@@ -481,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cipher Chase/Preview Content\"";
@@ -491,6 +557,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.swift;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -503,6 +571,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -513,6 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cipher Chase/Preview Content\"";
@@ -523,6 +594,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.swift;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,6 +608,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -545,6 +619,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
@@ -553,9 +628,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lujainalaydie.Cipher-ChaseTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cipher Chase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cipher Chase";
 			};
 			name = Debug;
@@ -565,6 +644,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
@@ -573,9 +653,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lujainalaydie.Cipher-ChaseTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cipher Chase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cipher Chase";
 			};
 			name = Release;
@@ -584,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
@@ -591,9 +675,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lujainalaydie.Cipher-ChaseUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "Cipher Chase";
 			};
 			name = Debug;
@@ -602,6 +690,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
@@ -609,9 +698,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lujainalaydie.Cipher-ChaseUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "Cipher Chase";
 			};
 			name = Release;
@@ -656,6 +748,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24E9DCAD2B119E93005E6D56 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24E9DCAE2B119E93005E6D56 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24E9DCAD2B119E93005E6D56 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+		24E9DCB02B119EB3005E6D56 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24E9DCAD2B119E93005E6D56 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+		24E9DCB22B119EBF005E6D56 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24E9DCAD2B119E93005E6D56 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 247DDE8E2B0E3B0500BDDCEC /* Project object */;
 }

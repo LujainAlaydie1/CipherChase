@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct frameStruct: View {
-    @State var someText: String
+    @Binding var someText: String
     @State var binary: String
+    var correctLetter: String
     var body: some View {
         
         HStack{
