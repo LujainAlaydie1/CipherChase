@@ -45,6 +45,9 @@
 		24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
 		24E9DCDF2B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
 		24E9DCE02B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
+		B8A158412B14E31F00CC70E6 /* scenario1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A158402B14E31F00CC70E6 /* scenario1.swift */; };
+		B8A158432B14E37200CC70E6 /* task2Diala.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A158422B14E37200CC70E6 /* task2Diala.swift */; };
+		B8A158472B14E54700CC70E6 /* scenario2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A158462B14E54700CC70E6 /* scenario2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		24E9DCC42B11B106005E6D56 /* phoenix.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = phoenix.gif; path = ../../Downloads/phoenix.gif; sourceTree = "<group>"; };
 		24E9DCD62B11B5D4005E6D56 /* gifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifView.swift; sourceTree = "<group>"; };
 		24E9DCDA2B11B87A005E6D56 /* sparkles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkles.swift; sourceTree = "<group>"; };
+		B8A158402B14E31F00CC70E6 /* scenario1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scenario1.swift; sourceTree = "<group>"; };
+		B8A158422B14E37200CC70E6 /* task2Diala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task2Diala.swift; sourceTree = "<group>"; };
+		B8A158462B14E54700CC70E6 /* scenario2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scenario2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +132,6 @@
 				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
 				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
-				247DDEA92B0E3B0600BDDCEC /* Cipher ChaseTests */,
 				247DDEB32B0E3B0600BDDCEC /* Cipher ChaseUITests */,
 				247DDE972B0E3B0500BDDCEC /* Products */,
 			);
@@ -152,6 +157,10 @@
 				24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */,
 				24E9DCA92B114F84005E6D56 /* winTask5.swift */,
 				247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */,
+				B8A158402B14E31F00CC70E6 /* scenario1.swift */,
+				B8A158462B14E54700CC70E6 /* scenario2.swift */,
+				B8A158422B14E37200CC70E6 /* task2Diala.swift */,
+				247DDEA92B0E3B0600BDDCEC /* Cipher ChaseTests */,
 				247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */,
 				247DDE9F2B0E3B0600BDDCEC /* Preview Content */,
 			);
@@ -374,10 +383,13 @@
 				24E9DCAC2B117487005E6D56 /* winframeStruct.swift in Sources */,
 				24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
+				B8A158472B14E54700CC70E6 /* scenario2.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
+				B8A158432B14E37200CC70E6 /* task2Diala.swift in Sources */,
 				24E9DCDB2B11B87A005E6D56 /* sparkles.swift in Sources */,
 				24A4C4002B123727006701A7 /* endScenario.swift in Sources */,
 				24E9DCAA2B114F84005E6D56 /* winTask5.swift in Sources */,
+				B8A158412B14E31F00CC70E6 /* scenario1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
