@@ -53,7 +53,7 @@ Approaching the central server, lines of buggy code await. A holographic script 
     
     var body: some View {
         if  self.navigateToNextView{
-            task2Diala()
+            task2()
         }else{
             NavigationStack(path: $path) {
                 ZStack {

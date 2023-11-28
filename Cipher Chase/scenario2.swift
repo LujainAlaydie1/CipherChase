@@ -42,7 +42,9 @@ struct scenario2: View {
     
      let secondFianl = """
 Upon leaving the main server room, the elite coding team follows the holographic map to a mysterious locked room. The entrance is adorned with a holographic puzzle, glowing with binary and hexadecimal code. The holographic message materializes:
+
 "A ciphered challenge guards the door to the next phase of your journey. Decrypt the code within, and the secrets you seek shall be revealed."
+
 As the team examines the holographic puzzle, they notice a series of binary and hexadecimal digits arranged in a grid, forming an intricate pattern. A riddle appears alongside the puzzle:
 """
     
@@ -52,7 +54,7 @@ As the team examines the holographic puzzle, they notice a series of binary and 
     
     var body: some View {
         if  self.navigateToNextView{
-            task2Diala()
+            task2()
         }else{
             NavigationStack(path: $path) {
                 ZStack {
