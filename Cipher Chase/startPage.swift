@@ -68,6 +68,7 @@ struct startPage: View {
                         
                         if showText {
 
+
                         Text("Are \nYou \nReady \nTo Start?")
                             .padding()
                             .font(Font.custom("PixelifySans-Bold", size: 30))
@@ -79,12 +80,13 @@ struct startPage: View {
                             .onAppear{
                                 startPopUpAnimation() // Start the pop-up animation
                             }
-
+                            
                     }//if
-                    
-                        Button("     Start    "){
-                        }
-                        .buttonStyle(BlueButton())
+                            
+                            Button("     Start    "){
+                            }
+                            .buttonStyle(BlueButton())
+                            .padding(.top)
                         
                 }//Vstack
                 
@@ -94,7 +96,7 @@ struct startPage: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
                 
-            }
+            } // VStack
             .onAppear {
                 startAnimation() // Start the initial animation
                 //startPopUpAnimation() // Start the pop-up animation
@@ -102,9 +104,9 @@ struct startPage: View {
                     showText = true
                 }
             }
-        }//VStack
+        }//ZStack
         
-    }//ZStack
+    }
 }
 
 
