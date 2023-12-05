@@ -109,7 +109,6 @@ struct task2: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
-                    .offset(y:225)
                     .allowsHitTesting(false)
             }
         }
