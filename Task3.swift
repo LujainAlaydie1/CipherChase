@@ -84,10 +84,14 @@ struct Task3: View {
                             Circle()
                                 .frame(width: 200, height: 200)
                                 .foregroundColor(.white)
-                            VStack(spacing: 35) {
+                            VStack(spacing: 5) {
                                 DigitView(digit: "A")
-                                HStack(spacing: 50) {
+                                HStack(spacing: 75) {
                                     DigitView(digit: "0")
+                                    DigitView(digit: "8")
+                                }
+                                HStack(spacing: 5) {
+                                    DigitView(digit: "F")
                                     DigitView(digit: "C")
                                 }
                             }
