@@ -80,8 +80,10 @@ struct crosswordTask1: View {
         
         if self.isActive{
             MainPage()
-            //diala's page
+            
                 .transition(.move(edge: .bottom))
+
+            
         }else{
             
         ZStack{
@@ -159,16 +161,16 @@ struct crosswordTask1: View {
                         
                         
                         
-                        
                     }//VStack
                 }//ZStack
-                
                 
                 Spacer()
                 Image("ones")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
+                    .zIndex(-1)
+                
             }//VStack
             
             
