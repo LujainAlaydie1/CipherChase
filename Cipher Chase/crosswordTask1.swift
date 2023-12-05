@@ -80,7 +80,7 @@ struct crosswordTask1: View {
         
         if self.isActive{
             MainPage()
-            
+            //Diala's Page
                 .transition(.move(edge: .bottom))
 
             
@@ -158,8 +158,6 @@ struct crosswordTask1: View {
                         }//VStack
                         .onReceive(enteredLetters.publisher, perform: { _ in checkAllFilled()})
                         //.padding(.bottom, -100)
-                        
-                        
                         
                     }//VStack
                 }//ZStack

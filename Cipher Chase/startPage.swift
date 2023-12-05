@@ -16,7 +16,7 @@ struct startPage: View {
     
     
     @State var indexValue = 0
-    @State var timeInterval: TimeInterval = 0.1
+    @State var timeInterval: TimeInterval = 0.01
     
     
     func startAnimation(){
@@ -95,12 +95,13 @@ struct startPage: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
+                    .zIndex(-1)
                 
             } // VStack
             .onAppear {
                 startAnimation() // Start the initial animation
                 //startPopUpAnimation() // Start the pop-up animation
-                DispatchQueue.main.asyncAfter(deadline: .now() + 33.5) { // Change the delay as needed
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Change the delay as needed
                     showText = true
                 }
             }

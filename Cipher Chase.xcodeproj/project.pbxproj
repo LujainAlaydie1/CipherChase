@@ -46,6 +46,7 @@
 		24E9DCDF2B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
 		24E9DCE02B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
 		A59203562B14BE0A00A45576 /* crosswordTask1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59203552B14BE0A00A45576 /* crosswordTask1.swift */; };
+		A5AD34592B1F982900FEBED1 /* scenarioPagesH.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD34582B1F982900FEBED1 /* scenarioPagesH.swift */; };
 		A5B75B9E2B13854800306219 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B75B9D2B13854800306219 /* MainPage.swift */; };
 		A5B75BA02B138A3F00306219 /* startPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B75B9F2B138A3F00306219 /* startPage.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		24E9DCD62B11B5D4005E6D56 /* gifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifView.swift; sourceTree = "<group>"; };
 		24E9DCDA2B11B87A005E6D56 /* sparkles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkles.swift; sourceTree = "<group>"; };
 		A59203552B14BE0A00A45576 /* crosswordTask1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crosswordTask1.swift; sourceTree = "<group>"; };
+		A5AD34582B1F982900FEBED1 /* scenarioPagesH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scenarioPagesH.swift; sourceTree = "<group>"; };
 		A5B75B9D2B13854800306219 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		A5B75B9F2B138A3F00306219 /* startPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 				A5B75B9F2B138A3F00306219 /* startPage.swift */,
 				A5B75B9D2B13854800306219 /* MainPage.swift */,
 				A59203552B14BE0A00A45576 /* crosswordTask1.swift */,
+				A5AD34582B1F982900FEBED1 /* scenarioPagesH.swift */,
 				247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */,
 				247DDE9F2B0E3B0600BDDCEC /* Preview Content */,
 			);
@@ -387,6 +390,7 @@
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
 				24E9DCDB2B11B87A005E6D56 /* sparkles.swift in Sources */,
+				A5AD34592B1F982900FEBED1 /* scenarioPagesH.swift in Sources */,
 				24A4C4002B123727006701A7 /* endScenario.swift in Sources */,
 				24E9DCAA2B114F84005E6D56 /* winTask5.swift in Sources */,
 				A59203562B14BE0A00A45576 /* crosswordTask1.swift in Sources */,
