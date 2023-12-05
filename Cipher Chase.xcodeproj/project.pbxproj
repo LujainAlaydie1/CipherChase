@@ -28,8 +28,9 @@
 		24DA7A982B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
 		24DA7A992B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
 		24DA7A9A2B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
+		EC2B43C32B1E12B800E1F193 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B43C22B1E12B800E1F193 /* test.swift */; };
 		ECB21FD32B18AD5D003BEE4E /* Senarios Amira.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB21FD22B18AD5D003BEE4E /* Senarios Amira.swift */; };
-		ECB21FD72B18AD86003BEE4E /* task3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB21FD62B18AD86003BEE4E /* task3.swift */; };
+		ECB21FDB2B18B106003BEE4E /* Task3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB21FDA2B18B106003BEE4E /* Task3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +68,9 @@
 		24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AnonymousPro-Regular.ttf"; path = "../../../Downloads/Anonymous_Pro/AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
 		24DA7A932B10C5F200AB24EB /* frameStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frameStruct.swift; sourceTree = "<group>"; };
 		24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelifySans-Regular.ttf"; path = "../../../Downloads/Pixelify_Sans/static/PixelifySans-Regular.ttf"; sourceTree = "<group>"; };
+		EC2B43C22B1E12B800E1F193 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		ECB21FD22B18AD5D003BEE4E /* Senarios Amira.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Senarios Amira.swift"; sourceTree = "<group>"; };
-		ECB21FD62B18AD86003BEE4E /* task3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3.swift; sourceTree = "<group>"; };
+		ECB21FDA2B18B106003BEE4E /* Task3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Task3.swift; path = ../Task3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,10 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
+				EC2B43C82B1E209C00E1F193 /* View */,
+				EC2B43C52B1E1B2500E1F193 /* model */,
+				EC2B43C72B1E207C00E1F193 /* ViewModel */,
+				EC2B43C22B1E12B800E1F193 /* test.swift */,
 				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
 				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
@@ -123,7 +129,7 @@
 			children = (
 				24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */,
 				ECB21FD22B18AD5D003BEE4E /* Senarios Amira.swift */,
-				ECB21FD62B18AD86003BEE4E /* task3.swift */,
+				ECB21FDA2B18B106003BEE4E /* Task3.swift */,
 				24DA7A932B10C5F200AB24EB /* frameStruct.swift */,
 				247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */,
 				24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */,
@@ -175,6 +181,27 @@
 				24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */,
 			);
 			path = SVGStructures;
+			sourceTree = "<group>";
+		};
+		EC2B43C52B1E1B2500E1F193 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		EC2B43C72B1E207C00E1F193 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EC2B43C82B1E209C00E1F193 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,8 +346,9 @@
 				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				24DA7A942B10C5F200AB24EB /* frameStruct.swift in Sources */,
 				ECB21FD32B18AD5D003BEE4E /* Senarios Amira.swift in Sources */,
+				EC2B43C32B1E12B800E1F193 /* test.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
-				ECB21FD72B18AD86003BEE4E /* task3.swift in Sources */,
+				ECB21FDB2B18B106003BEE4E /* Task3.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
 			);

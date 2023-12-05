@@ -27,7 +27,6 @@ struct scenarioPageTask5: View {
             }
         }
     }
-    
     var body: some View {
         
         ZStack {
@@ -57,7 +56,6 @@ struct scenarioPageTask5: View {
                                 .padding([.leading, .trailing]) // Adjust padding as needed
                                 .frame(width: geometry.size.width, height: geometry.size.height + 40)
 
-                        
                         VStack{
                             HStack{
                                 frameStruct(someText: " ", binary: "01010000")
