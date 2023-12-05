@@ -54,7 +54,7 @@ As the team examines the holographic puzzle, they notice a series of binary and 
     
     var body: some View {
         if  self.navigateToNextView{
-            task2()
+            Task3()
         }else{
             NavigationStack(path: $path) {
                 ZStack {
