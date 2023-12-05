@@ -41,72 +41,85 @@ struct startPage: View {
         }
     }
     
+    @State private var navigateToNextView = false
+    
+    @State private var path = NavigationPath()
+    
     var body: some View {
         
-        ZStack{
-            Color(.background)
-                .edgesIgnoringSafeArea(.all)
-            
-            
-            VStack{
-                GeometryReader { geometry in
-                    
-                    Text(animateTitle)
-                        .font(Font.custom("PixelifySans-Bold", size: 16))
-                        .padding(.horizontal)
-                        .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
-                        .padding([.leading, .trailing]) // Adjust padding as needed
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(.white)
-                    
-                    
-                } // Geometry reader
+        if  self.navigateToNextView{
+            scenarioPagesH()
+        }else{
+            NavigationStack(path: $path) {
                 
-                Spacer()
-                
+                ZStack{
+                    Color(.background)
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    
                     VStack{
-                        
-                        if showText {
-
-
-                        Text("Are \nYou \nReady \nTo Start?")
-                            .padding()
-                            .font(Font.custom("PixelifySans-Bold", size: 30))
-                            .foregroundColor(.logocolor)
-                            .padding(.horizontal)
-                            .multilineTextAlignment(.leading)
-                            .foregroundColor(.white)
-                            .transition(.opacity) // Apply a transition effect
-                            .onAppear{
-                                startPopUpAnimation() // Start the pop-up animation
-                            }
+                        GeometryReader { geometry in
                             
-                    }//if
+                            Text(animateTitle)
+                                .font(Font.custom("PixelifySans-Bold", size: 16))
+                                .padding(.horizontal)
+                                .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
+                                .padding([.leading, .trailing]) // Adjust padding as needed
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(.white)
                             
-                            Button("     Start    "){
-                            }
-                            .buttonStyle(BlueButton())
-                            .padding(.top)
+                            
+                        } // Geometry reader
                         
-                }//Vstack
+                        Spacer()
+                        
+                        VStack(spacing: 0){
+                            
+                            if showText {
+                                
+                                
+                                Text("Are \nYou \nReady \nTo Start?")
+                                    .padding()
+                                    .font(Font.custom("PixelifySans-Bold", size: 30))
+                                    .foregroundColor(.logocolor)
+                                    .padding(.horizontal)
+                                    .multilineTextAlignment(.leading)
+                                    .foregroundColor(.white)
+                                    .transition(.opacity) // Apply a transition effect
+                                    .onAppear{
+                                        startPopUpAnimation() // Start the pop-up animation
+                                    }
+                                
+                            }//if
+                                
+                            HStack{
+                                Button("     Start    "){
+                                    navigateToNextView = true
+                                }
+                                .buttonStyle(BlueButton())
+                            }
+
+                        }//Vstack
+                        
                 
-                Spacer()
-                Image("ones")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 200)
-                    .zIndex(-1)
-                
-            } // VStack
-            .onAppear {
-                startAnimation() // Start the initial animation
-                //startPopUpAnimation() // Start the pop-up animation
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Change the delay as needed
-                    showText = true
-                }
+                        Spacer()
+                        Image("ones")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 200)
+                            .zIndex(-1)
+                        
+                    } // VStack
+                    .onAppear {
+                        startAnimation() // Start the initial animation
+                        //startPopUpAnimation() // Start the pop-up animation
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Change the delay as needed
+                            showText = true
+                        }
+                    }
+                }//ZStack
             }
-        }//ZStack
-        
+        }
     }
 }
 

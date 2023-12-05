@@ -15,7 +15,7 @@ struct MainPage: View {
     var body: some View {
         
         if  self.navigateToNextView{
-            scenarioPagesH()
+            startPage()
             
         }else{
             
