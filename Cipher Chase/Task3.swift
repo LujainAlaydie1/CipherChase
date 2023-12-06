@@ -161,25 +161,31 @@ struct frameStructA: View {
     var body: some View {
         
         HStack{
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 50, height: 50)
-                        .background(Color.white)
-                        .cornerRadius(7)
-                        .padding([.leading])
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 50, height: 50)
+                .background(Color.white)
+                .cornerRadius(7)
+                .padding([.leading])
+                .padding(.top)
+                .overlay(
+                    TextField("   ", text: $someText)
+                        .foregroundColor(.black)
+                        .font(Font.custom("AnonymousPro-Bold", size: 35))
+                        .fontWeight(.bold)
+                        .padding(.leading, 20)
                         .padding(.top)
-                        .overlay(
-                            TextField("   ", text: $someText)
-                                .foregroundColor(.black)
-                                .font(Font.custom("AnonymousPro-Bold", size: 35))
-                                .fontWeight(.bold)
-                                .padding(.leading, 20)
-                                .padding(.top)
-                                .onChange(of: someText) {
-                                    if someText.count > 1 {
-                                        someText = String(someText.prefix(1))
-                                    }
-                                })}}}
+                        .onChange(of: someText) {
+                            if someText.count > 1 {
+                                someText = String(someText.prefix(1))
+                            }
+                        })
+        }
+        .onAppear {
+            UserDefaults.standard.set("Task3", forKey: "leftOff")
+                }
+    }
+}
 #Preview {
     Task3()
 }

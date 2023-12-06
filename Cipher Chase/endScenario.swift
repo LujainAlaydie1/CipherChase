@@ -164,7 +164,11 @@ The virtual doorway closes behind them, leaving the elite coding team standing i
                 // Code to execute when clickCount changes
                 // You can print values or trigger animations here
                 print("Click count: \(clickCount)")
+
             }
+            .onAppear {
+                UserDefaults.standard.set("endScenario", forKey: "leftOff")
+                    }
             
         }
         

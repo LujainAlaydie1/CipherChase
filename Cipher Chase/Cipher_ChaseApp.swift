@@ -11,14 +11,9 @@ import SwiftUI
 struct Cipher_ChaseApp: App {
     var body: some Scene {
         WindowGroup {
-<<<<<<< HEAD
             SplashScreen()
-=======
-          //scenarioPageTask5()
-           // test11()
-         Task3()
-            //test()
->>>>>>> amira
+            
+            
         }
     }
 }

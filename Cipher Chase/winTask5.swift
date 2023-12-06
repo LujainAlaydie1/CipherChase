@@ -157,8 +157,11 @@ struct winTask5: View {
                     
                 }
             } .navigationBarHidden(true)  // Hide the navigation bar
-            
+                .onAppear {
+                    UserDefaults.standard.set("winTask5", forKey: "leftOff")
+                        }
         }
+
     }
     
 

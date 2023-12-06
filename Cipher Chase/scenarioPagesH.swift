@@ -1,17 +1,22 @@
 //
-//  Senario 1 Amira.swift
+//  scenarioPagesH.swift
 //  Cipher Chase
 //
-//  Created by AMIRA on 13/05/1445 AH.
+//  Created by haifa alfoiz on 05/12/2023.
 //
 
 import SwiftUI
+import Combine
 
-struct Senario_1_Amira: View {
-    
+
+struct scenarioPagesH: View {
     @State var indexValue = 0
     @State var timeInterval: TimeInterval = 0.01
+    private var cancellables: Set<AnyCancellable> = []
     @State private var clickCount = 0
+    
+    @SceneStorage("currentPage") var currentPage: String?
+
 
     @State private var navigateToNextView = false
     
@@ -30,36 +35,21 @@ struct Senario_1_Amira: View {
             }
         }
     }
+    
+    
     @State private var someText = ""
     @State var animateTitle: String = ""
-    @State var finalText: String =  """
-The team quickly realizes that "2572" is the key to unlocking the puzzle.
-With the correct solution in mind, they interact with the holographic puzzle, inputting "2572" in the lock. The holographic door shimmers, and with a soft click, it swings open, granting access to the secret area beyond.
-"""
+    @State var finalText: String =  "As the Elite Coding Team steps into the virtual lobby of the coding academy, they are greeted by the faint humming of servers and the glow of neon code scrolling across digital billboards. In the center of the lobby lies an unassuming laptop, its screen displaying a mysterious message: \"Cracked minds seek truth, but only those with the code can reveal it. Your journey begins here, Unlock the secrets within\""
     
-     let secondFianl = """
-Inside the secret room, the atmosphere changes. Glowing terminals line the walls, each displaying encrypted files. The holographic map updates once again, pinpointing a particular encrypted file containing crucial information about The Encoder and their next move.
-"Well done, Codebreakers! Your mastery of ciphers has granted you access to the vault of knowledge. Dive into the encrypted files, and the identity of The Encoder shall be revealed, along with their plans for the academy."
-The elite coding team, fueled by determination, begins deciphering the encrypted files, uncovering the mysteries that will guide them through the next phase of their mission. The virtual room echoes with the hum of decryption, signaling that the answers they seek are within their grasp.
-"""
-    
-    let thirdFinal = """
-As the elite coding team delves into the encrypted files within the secret room, they discover a trove of information. The holographic terminals display intricate lines of code, each requiring their expert decoding skills.
-The holographic map pinpoints a specific encrypted file labeled "Project_Phoenix." Intrigued, the team focuses their attention on decrypting this file, knowing it holds the key to understanding The Encoder's grand plan.
-"""
-    let forthFinal = """
-The encrypted file appears as a complex algorithm, interweaving binary, hexadecimal, and intricate patterns. The holographic message materializes:
-    "The Phoenix rises in the realm of logic. Crack the code, unveil its wings, and the truth shall soar."
-    The team understands that deciphering this file is critical to uncovering The Encoder's next move. With each successful decryption, fragments of The Encoder's identity and their motives come to light.
-     
-"""
+     let secondFianl = "The laptop seems to be the first puzzle left by The Encoder. As the players approach, they notice the laptop is pin-protected, and a digital timer starts counting down. It's a race against the clock. The room is filled with holographic displays of code snippets and flickering neon lights. The players spot a holographic note on the floor, revealing a riddle."
+
     
     @State var buttonText = "Next"
     
+    
     var body: some View {
         if  self.navigateToNextView{
-            binaryConversion()
-            //related to maha's pages.
+            crosswordTask1()
         }else{
             NavigationStack(path: $path) {
                 ZStack {
@@ -80,6 +70,13 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                 }
                             
                         } /// here!
+                        
+                        Spacer()
+                        
+                        Image("ones")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 200)
                     }
                     
                     HStack {
@@ -104,9 +101,8 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                                 case 1:
                                                     self.finalText = ""
                                                     self.finalText = """
-                                                    Inside the secret room, the atmosphere changes. Glowing terminals line the walls, each displaying encrypted files. The holographic map updates once again, pinpointing a particular encrypted file containing crucial information about The Encoder and their next move.
-                                                    "Well done, Codebreakers! Your mastery of ciphers has granted you access to the vault of knowledge. Dive into the encrypted files, and the identity of The Encoder shall be revealed, along with their plans for the academy."
-                                                    The elite coding team, fueled by determination, begins deciphering the encrypted files, uncovering the mysteries that will guide them through the next phase of their mission. The virtual room echoes with the hum of decryption, signaling that the answers they seek are within their grasp.
+                                                    With unwavering determination, the elite coding team delves into the master code. As each line unravels, a revelation emerges. The identity of The Encoder is unveiled, and the virtual realm trembles with the triumph of the Decoders.
+                                                    In a dazzling display, the virtual realm transforms. The servers hum in harmony, glitches dissipate, and the academy's digital core pulses with newfound stability. The mission is complete, and the coding academy is saved from the grasp of The Encoder.
                                                     """
 
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -114,32 +110,15 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                                         self.indexValue = 0
                                                         self.startAnimation()
                                                     }
-                                              
+                                                    self.buttonText = "Solve"
                                                     // Add your custom action here
                                                     
                                                 case 2:
                                                     // Action for the second click
-                                                    self.finalText = thirdFinal
-                                                    print(self.finalText)
-                                                    self.animateTitle = ""
-                                                    self.indexValue = 0
-                                                    self.startAnimation()
-                                                    self.buttonText = "Next"
-                                                    // Add your custom action here
-                                                case 3:
-                                                    // Action for the second click
-                                                    self.finalText = forthFinal
-                                                    print(self.finalText)
-                                                    self.animateTitle = ""
-                                                    self.indexValue = 0
-                                                    self.startAnimation()
-                                                    self.buttonText = "Solve"
-                                                    // Add your custom action here
-                                                    
-                                                case 4:
                                                     navigateToNextView = true
                                                     // Add more cases for additional clicks if needed
-                                                
+                                                    
+                                                    
                                                 default:
                                                     // Default action for subsequent clicks
                                                     print("Clicked again!")
@@ -157,6 +136,7 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                             }
                                             .padding([.trailing], geometry.size.width / 44)
                                             .padding(.top, geometry.size.height / 1.12)
+                                            
                                         }
                                     
                                     
@@ -164,14 +144,7 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                 }
                         }
                     }
-                    Image("ones")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 200)
-                        .offset(y:225)
-                        .allowsHitTesting(false)
                 }
-                
                 
                 
                 .contentShape(Rectangle())
@@ -182,14 +155,17 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                 // You can print values or trigger animations here
                 print("Click count: \(clickCount)")
             }
-            
             .onAppear {
-                UserDefaults.standard.set("Senarios Amira", forKey: "leftOff")
-                    }
+                UserDefaults.standard.set("scenarioPagesH", forKey: "leftOff")
+
+            }
+
+
         }
+
         }
-    }
+}
 
 #Preview {
-    Senario_1_Amira()
+    scenarioPagesH()
 }

@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>AnonymousPro-Bold.ttf</string>
 		<string>PixelifySans-Bold.ttf</string>
 		<string>AnonymousPro-Regular.ttf</string>
 		<string>PixelifySans-Regular.ttf</string>

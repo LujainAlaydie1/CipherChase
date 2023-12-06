@@ -38,7 +38,6 @@ struct scenarioPageTask5: View {
             }
         }
     }
-<<<<<<< HEAD
     
     func checkCorrectness()  -> Bool{
         // Assuming correctLetters is an array of correct letters in the same order
@@ -61,9 +60,6 @@ struct scenarioPageTask5: View {
                 allCorrect = false
             }
         }
-=======
-    var body: some View {
->>>>>>> amira
         
         if allCorrect {
             print("All letters are correct!")
@@ -105,7 +101,6 @@ struct scenarioPageTask5: View {
                                 .padding(.horizontal)
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
                                 .padding([.leading, .trailing]) // Adjust padding as needed
-<<<<<<< HEAD
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.white)
                                 .onAppear{
@@ -154,31 +149,6 @@ struct scenarioPageTask5: View {
                                     
                                 }
                                 .offset(y: -(geometry.size.height / 2.3))  // Adjust the value based on how much you want to lift it up
-=======
-                                .frame(width: geometry.size.width, height: geometry.size.height + 40)
-
-                        VStack{
-                            HStack{
-                                frameStruct(someText: " ", binary: "01010000")
-                            }
-                            HStack{
-                                frameStruct(someText: " ", binary: "01101000")
-                            }
-                            HStack{
-                                frameStruct(someText: " ", binary: "01101111")
-                            }
-                            HStack{
-                                frameStruct(someText: " ", binary: "01100101")
-                            }
-                            HStack{
-                                frameStruct(someText: " ", binary: "01101110")
-                            }
-                            HStack{
-                                frameStruct(someText: " ", binary: "01101001")
-                            }
-                            HStack{
-                                frameStruct(someText: " ", binary: "01111000")
->>>>>>> amira
                             }
                             
                             
@@ -210,7 +180,12 @@ struct scenarioPageTask5: View {
                 
                 
             }
+            .onAppear {
+                UserDefaults.standard.set("scenarioPageTask5", forKey: "leftOff")
+                    }
+            
         }
+
     }
       }
 

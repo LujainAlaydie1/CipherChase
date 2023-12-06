@@ -15,7 +15,7 @@ struct SplashScreen: View {
         
         ZStack {
             if self.isActive{
-                scenarioPageTask5()
+                MainPage()
             }else{
                 Color(.sRGB, red: 2/255, green: 49/255, blue: 69/255)
                     .edgesIgnoringSafeArea(.all)
