@@ -26,11 +26,10 @@
 		24DA7A912B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */; };
 		24DA7A922B10C53800AB24EB /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */; };
 		24DA7A942B10C5F200AB24EB /* frameStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A932B10C5F200AB24EB /* frameStruct.swift */; };
-		24DA7A952B10C5F200AB24EB /* frameStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A932B10C5F200AB24EB /* frameStruct.swift */; };
-		24DA7A962B10C5F200AB24EB /* frameStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A932B10C5F200AB24EB /* frameStruct.swift */; };
 		24DA7A982B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
 		24DA7A992B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
 		24DA7A9A2B10D8FF00AB24EB /* PixelifySans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */; };
+<<<<<<< HEAD
 		24E9DCAA2B114F84005E6D56 /* winTask5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCA92B114F84005E6D56 /* winTask5.swift */; };
 		24E9DCAC2B117487005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
 		24E9DCAF2B119E93005E6D56 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E9DCAE2B119E93005E6D56 /* FLAnimatedImage */; };
@@ -45,6 +44,11 @@
 		24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
 		24E9DCDF2B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
 		24E9DCE02B11C348005E6D56 /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCAB2B117487005E6D56 /* winframeStruct.swift */; };
+=======
+		EC2B43C32B1E12B800E1F193 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B43C22B1E12B800E1F193 /* test.swift */; };
+		ECB21FD32B18AD5D003BEE4E /* Senarios Amira.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB21FD22B18AD5D003BEE4E /* Senarios Amira.swift */; };
+		ECB21FDB2B18B106003BEE4E /* Task3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB21FDA2B18B106003BEE4E /* Task3.swift */; };
+>>>>>>> amira
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,11 +87,17 @@
 		24DA7A8F2B10C53800AB24EB /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AnonymousPro-Regular.ttf"; path = "../../../Downloads/Anonymous_Pro/AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
 		24DA7A932B10C5F200AB24EB /* frameStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frameStruct.swift; sourceTree = "<group>"; };
 		24DA7A972B10D8FF00AB24EB /* PixelifySans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelifySans-Regular.ttf"; path = "../../../Downloads/Pixelify_Sans/static/PixelifySans-Regular.ttf"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		24E9DCA92B114F84005E6D56 /* winTask5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winTask5.swift; sourceTree = "<group>"; };
 		24E9DCAB2B117487005E6D56 /* winframeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winframeStruct.swift; sourceTree = "<group>"; };
 		24E9DCC42B11B106005E6D56 /* phoenix.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = phoenix.gif; path = ../../Downloads/phoenix.gif; sourceTree = "<group>"; };
 		24E9DCD62B11B5D4005E6D56 /* gifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifView.swift; sourceTree = "<group>"; };
 		24E9DCDA2B11B87A005E6D56 /* sparkles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkles.swift; sourceTree = "<group>"; };
+=======
+		EC2B43C22B1E12B800E1F193 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		ECB21FD22B18AD5D003BEE4E /* Senarios Amira.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Senarios Amira.swift"; sourceTree = "<group>"; };
+		ECB21FDA2B18B106003BEE4E /* Task3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Task3.swift; path = ../Task3.swift; sourceTree = "<group>"; };
+>>>>>>> amira
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +131,15 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				24E9DCDE2B11C336005E6D56 /* sstructs */,
 				24E9DCC42B11B106005E6D56 /* phoenix.gif */,
+=======
+				EC2B43C82B1E209C00E1F193 /* View */,
+				EC2B43C52B1E1B2500E1F193 /* model */,
+				EC2B43C72B1E207C00E1F193 /* ViewModel */,
+				EC2B43C22B1E12B800E1F193 /* test.swift */,
+>>>>>>> amira
 				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
 				24DA7A2F2B0EA55E00AB24EB /* Font */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
@@ -146,7 +163,13 @@
 			isa = PBXGroup;
 			children = (
 				24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */,
+<<<<<<< HEAD
 				24E9DCD62B11B5D4005E6D56 /* gifView.swift */,
+=======
+				ECB21FD22B18AD5D003BEE4E /* Senarios Amira.swift */,
+				ECB21FDA2B18B106003BEE4E /* Task3.swift */,
+				24DA7A932B10C5F200AB24EB /* frameStruct.swift */,
+>>>>>>> amira
 				247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */,
 				24A4C3FF2B123727006701A7 /* endScenario.swift */,
 				24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */,
@@ -202,6 +225,7 @@
 			path = SVGStructures;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		24E9DCDE2B11C336005E6D56 /* sstructs */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +233,27 @@
 				24E9DCAB2B117487005E6D56 /* winframeStruct.swift */,
 			);
 			path = sstructs;
+=======
+		EC2B43C52B1E1B2500E1F193 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		EC2B43C72B1E207C00E1F193 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EC2B43C82B1E209C00E1F193 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+>>>>>>> amira
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,9 +415,15 @@
 			files = (
 				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				24DA7A942B10C5F200AB24EB /* frameStruct.swift in Sources */,
+				ECB21FD32B18AD5D003BEE4E /* Senarios Amira.swift in Sources */,
+				EC2B43C32B1E12B800E1F193 /* test.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
+<<<<<<< HEAD
 				24E9DCAC2B117487005E6D56 /* winframeStruct.swift in Sources */,
 				24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */,
+=======
+				ECB21FDB2B18B106003BEE4E /* Task3.swift in Sources */,
+>>>>>>> amira
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
 				24E9DCDB2B11B87A005E6D56 /* sparkles.swift in Sources */,
@@ -387,9 +438,12 @@
 			files = (
 				247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */,
 				24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
+<<<<<<< HEAD
 				24E9DCE02B11C348005E6D56 /* winframeStruct.swift in Sources */,
 				24DA7A952B10C5F200AB24EB /* frameStruct.swift in Sources */,
 				24E9DCDC2B11B87A005E6D56 /* sparkles.swift in Sources */,
+=======
+>>>>>>> amira
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,8 +451,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */,
 				24DA7A962B10C5F200AB24EB /* frameStruct.swift in Sources */,
+=======
+>>>>>>> amira
 				24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				24E9DCDF2B11C348005E6D56 /* winframeStruct.swift in Sources */,
 				247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */,
