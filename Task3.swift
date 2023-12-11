@@ -4,8 +4,6 @@
 //
 //  Created by AMIRA on 12/05/1445 AH.
 //
-
-
 import SwiftUI
 
 struct Task3: View {
