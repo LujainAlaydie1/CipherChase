@@ -14,7 +14,7 @@ struct MainPage: View {
     @State private var navigateToNextView = false
     @SceneStorage("currentPage") var currentPage: String?
     @State private var isNavigationActive = false
-
+    @EnvironmentObject var router: Router
 
     func navigateToLastViewedPage() {
         // Navigate to the last viewed page
@@ -49,8 +49,7 @@ struct MainPage: View {
                return AnyView(Senario_1_Amira())
            case "Qmaha":
                return AnyView(Qmaha())
-           case "task4q":
-               return AnyView(task4q())
+               
            case "mahas_senarios":
                return AnyView(mahas_senarios())
            case "winTask5":
@@ -61,8 +60,7 @@ struct MainPage: View {
                return AnyView(binaryConversion())
            case "continuePage":
                return AnyView(continuePage())
-           case "traceView":
-               return AnyView(traceView())
+
                // Handle other cases similarly
 
                default:
@@ -70,16 +68,10 @@ struct MainPage: View {
            }
        }
     
+
     
     var body: some View {
-        
-        if  self.navigateToNextView{
-            startPage()
-            
-        }else{
-            
-            NavigationStack(path: $path) {
-                ZStack{
+            ZStack{
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
                     
@@ -122,77 +114,72 @@ struct MainPage: View {
                         
                         VStack(spacing: 20){
                             
-                            Button("New Game"){
-                                navigateToNextView = true
-                            }
-                            .buttonStyle(BlueButton())
-                            
+                                Button("New Game"){
+                                    router.navigate(to: .Startpage)
+                                }
+                                .buttonStyle(BlueButton())
                             
                             Button(" Continue  "){
-                                let retrievedPage = UserDefaults.standard.string(forKey: "leftOff")
                                 
+                                let retrievedPage = UserDefaults.standard.string(forKey: "leftOff")
+                                print(retrievedPage ?? "Nothing")
                                 switch retrievedPage{
-                                case "startPage":
-                                    isNavigationActive = true
-
+                                case "StartPage":
+                                    router.navigate(to: .Startpage)
                                     break
                                 case "scenarioPagesH":
-                                    isNavigationActive = true
+                                    router.navigate(to: .scenariopagesh)
                                     break
                                 case "crosswordTask1":
-                                    isNavigationActive = true
+                                    router.navigate(to: .crosswordTask)
                                     break
                                     
                                 case "scenario1":
-                                    isNavigationActive = true
+                                    router.navigate(to: .scenarios1)
                                     break
                                     
                                 case "task2":
-                                    isNavigationActive = true
+                                    router.navigate(to: .task2)
                                     break
                                 case "scenario2":
-                                    isNavigationActive = true
+                                    router.navigate(to: .scenarios2)
                                     break
 
                                 case "Task3":
-                                    isNavigationActive = true
+                                    router.navigate(to: .tassk3)
                                     break
 
                                 case "Senarios Amira":
-                                    isNavigationActive = true
+                                    router.navigate(to: .scenario3)
                                     break
 
                                 case "Qmaha":
-                                    isNavigationActive = true
-                                    break
-
-                                case "task4q":
-                                    isNavigationActive = true
+                                    router.navigate(to: .maha)
                                     break
 
                                 case "mahas_senarios":
-                                    isNavigationActive = true
+                                    router.navigate(to: .scenario4)
                                     break
 
                                 case "winTask5":
-                                    isNavigationActive = true
+                                    router.navigate(to: .task5)
                                     break
 
                                 case "endScenario":
-                                    isNavigationActive = true
+                                    router.navigate(to: .ending)
                                     break
 
                                 case "binaryConversion":
-                                    isNavigationActive = true
+                                    router.navigate(to: .binaryconvert)
                                     break
 
                                 case "continuePage":
-                                    isNavigationActive = true
+                                    router.navigate(to: .continueP)
                                     break
 
-                                case "traceView":
-                                    isNavigationActive = true
-                                    break
+                                case "scenarioPageTask5":
+                                    router.navigate(to: .scenario5)
+                             
 
                                 case .none:
                                     break
@@ -204,16 +191,7 @@ struct MainPage: View {
                                 
                             }
                             .buttonStyle(BlueButton())
-                            .background(NavigationLink(
-                                destination: destinationViewForPage().navigationBarBackButtonHidden(), // Call a method to determine the destination view
-                                                isActive: $isNavigationActive,
-                                                label: { EmptyView() }
-                                            ))
-                            
-                            Button("     About     "){
-                                
-                            }
-                            .buttonStyle(BlueButton())
+
                             
                         }
                         
@@ -221,13 +199,10 @@ struct MainPage: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(height: 200)
+                            .allowsHitTesting(false)
                     }
                 }
-            }
-           
         }
-        
-    }
 }
 
  struct BlueButton: ButtonStyle {

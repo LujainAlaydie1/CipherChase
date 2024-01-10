@@ -18,13 +18,9 @@ struct winTask5: View {
     @State private var enteredLetters: [String] = ["P","h","o","e","n","i","x"]
     @State public var tropheyPath: String = "trophey"
     @State var isActive: Bool = false
+    @EnvironmentObject var router: Router
 
     var body: some View {
-        if self.isActive{
-            endScenario()
-                .transition(.move(edge: .bottom))
-
-        }else{
             ZStack {
                 Color(.background)
                     .edgesIgnoringSafeArea(.all)
@@ -44,7 +40,7 @@ struct winTask5: View {
                 VStack {
                     GeometryReader { geometry in
                         Text(finalText)
-                            .font(Font.custom("PixelifySans-Bold", size: 16))
+                            .font(Font.system(size: 16))
                             .padding(.horizontal)
                             .padding(.top, geometry.safeAreaInsets.top + 20) // Adjust for top safe area
                             .padding([.leading, .trailing]) // Adjust padding as needed
@@ -137,7 +133,31 @@ struct winTask5: View {
                             .offset(y: -(geometry.size.height / 3.3))  // Adjust the value based on how much you want to lift it up
                             
                         }
-                        
+                        HStack{
+                            RoundedRectangle(cornerRadius: 8)
+                                .frame(width: geometry.size.width / 4, height: geometry.size.height / 8)
+                                .padding([.leading, .trailing], geometry.size.width / 3)
+                                .foregroundColor(.secondarys)
+                                .offset(x: 25, y: 205)
+                                        .overlay{
+                                            Text("Next")
+                                                .font(Font.custom("PixelifySans-Bold", size: 22))
+                                                .foregroundColor(.secondarys)
+                                                .frame(width: geometry.size.width / 4, height: geometry.size.height / 8)
+                                            
+                                                .background(
+                                                    RoundedRectangle(cornerRadius: 8)
+                                                        .foregroundColor(.accents)
+                                                    
+                                                )
+                                                .offset(x: 20, y: 200)
+                                                .onTapGesture {
+                                                    router.navigate(to: .ending)
+                                                }
+
+                                                                            
+                                        }
+                            }
                         
                         Image("ones")
                             .resizable()
@@ -146,21 +166,33 @@ struct winTask5: View {
                             .offset(y:130)
                             .allowsHitTesting(false)  // Disable user interaction
                         
+
                     }
                 }
                 .contentShape(Rectangle())
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        self.isActive = true
-
-                    }
-                    
-                }
-            } .navigationBarHidden(true)  // Hide the navigation bar
-                .onAppear {
+ 
+            }
+            .onAppear {
                     UserDefaults.standard.set("winTask5", forKey: "leftOff")
                         }
-        }
+        
+            .navigationBarBackButtonHidden()
+
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+
+        
+
 
     }
     

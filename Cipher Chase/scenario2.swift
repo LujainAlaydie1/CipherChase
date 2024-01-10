@@ -35,9 +35,11 @@ struct scenario2: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-    As the elite coding team fixes the bug-infested code, a virtual doorway materializes, unlocking the next stage of their journey. The holographic map updates, marking their progress.
-    "Congratulations, decoders! Your keen debugging skills restored order. The door to the next destination is open in your quest to unveil academy mysteries."
-    The map reveals the "Logic Labyrinth." The team steps through the virtual doorway, leaving echoes of fixed code behind, ready for the challenges ahead.
+   As the elite coding team fixes the bug-infested code, a virtual doorway materializes, unlocking the next stage of their journey. The holographic map updates, marking their progress.
+
+   "Congratulations, decoders! Your keen debugging skills restored order. The door to the next destination is open in your quest to unveil academy mysteries."
+
+   The map reveals the "Logic Labyrinth." The team steps through the virtual doorway, leaving echoes of fixed code behind, ready for the challenges ahead.
 """
     
      let secondFianl = """
@@ -51,12 +53,9 @@ As the team examines the holographic puzzle, they notice a series of binary and 
     
     
     @State var buttonText = "Next"
-    
+    @EnvironmentObject var router: Router
+
     var body: some View {
-        if  self.navigateToNextView{
-            Task3()
-        }else{
-            NavigationStack(path: $path) {
                 ZStack {
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
@@ -65,12 +64,13 @@ As the team examines the holographic puzzle, they notice a series of binary and 
                     VStack {
                         GeometryReader { geometry in
                             Text(animateTitle)
-                                .font(Font.custom("PixelifySans-Bold", size: 16))
                                 .padding(.horizontal)
+                                .font(Font.system(size: 16))
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
                                 .padding([.leading, .trailing]) // Adjust padding as needed
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.white)
+                                .offset(y: -60)
                                 .onAppear{
                                     startAnimation()
                                 }
@@ -100,9 +100,9 @@ As the team examines the holographic puzzle, they notice a series of binary and 
                                                 case 1:
                                                     self.finalText = ""
                                                     self.finalText = """
-                                                    Upon leaving the main server room, the elite coding team follows the holographic map to a mysterious locked room. The entrance is adorned with a holographic puzzle, glowing with binary and hexadecimal code. The holographic message materializes:
-                                                    "A ciphered challenge guards the door to the next phase of your journey. Decrypt the code within, and the secrets you seek shall be revealed."
-                                                    As the team examines the holographic puzzle, they notice a series of binary and hexadecimal digits arranged in a grid, forming an intricate pattern. A riddle appears alongside the puzzle:
+                                                    The holographic map updates one last time, displaying a message of triumph: "Codebreakers, you have restored balance to the digital realm. The academy is secure, and your coding legacy lives on."
+                                                    
+                                                    The virtual doorway closes behind them, leaving the elite coding team standing in the now serene virtual environment. The echoes of their success resonate, marking the end of their epic journey to safeguard the coding academy.
                                                     """
 
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -118,7 +118,7 @@ As the team examines the holographic puzzle, they notice a series of binary and 
                                                     
                                                     
                                                 case 2:
-                                                    navigateToNextView = true
+                                                    router.navigate(to: .tassk3)
                                                     // Add more cases for additional clicks if needed
                                                     
                                                 default:
@@ -155,8 +155,7 @@ As the team examines the holographic puzzle, they notice a series of binary and 
                 
                 
                 .contentShape(Rectangle())
-            }
-            .navigationBarHidden(true)  // Hide the navigation bar on this screen
+            
             .onReceive([self.clickCount].publisher) { _ in
                 // Code to execute when clickCount changes
                 // You can print values or trigger animations here
@@ -165,7 +164,20 @@ As the team examines the holographic puzzle, they notice a series of binary and 
             .onAppear {
                 UserDefaults.standard.set("scenario2", forKey: "leftOff")
                     }
-        }
+        
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
 
             
         }

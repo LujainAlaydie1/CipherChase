@@ -38,47 +38,74 @@ struct Qmaha: View {
     
     @State var isActive: Bool = false
     
+    @State private var isButton6Tapped = false
+    @State private var isButton1Tapped = false
     
-    var body: some View {
+    @EnvironmentObject var router: Router
+    @State private var isShowingPopup = false
+    @State private var progress: Double = 5 / 6
         
-        if self.isActive{
-            mahas_senarios()
-        }else{
-            NavigationStack(path: $path) {
+    var body: some View {
                 ZStack {
                     Color(.sRGB, red: 2/255, green: 49/255, blue: 69/255)
                         .edgesIgnoringSafeArea(.all)
                     
-                    VStack {
+                        VStack(spacing: -20) {
+                            
+                            ZStack(alignment: .leading) {
+                                ProgressView(value: progress)
+                                    .progressViewStyle(LinearProgressViewStyle())
+                                    .accentColor(.accents) // Set the color for the filled part
+                                
+                                Image("trophey")
+                                    .resizable()
+                                    .scaledToFit() // Maintain the aspect ratio while resizing
+                                    .frame(width: 21, height: 16)
+                                    .offset(x: CGFloat(progress) * 370) // Adjust the offset based on the progress
+                            }
+                            
+                            .alert(isPresented: $isShowingPopup) {
+                                Alert(
+                                    title: Text("Information"),
+                                    message: Text("Find the correct decryption shift."),
+                                    dismissButton: .default(Text("OK"))
+                                )
+                            }
+                            
                         GeometryReader { geometry in
                             ScrollView {
                                 VStack(alignment: .leading) {
                                     Text(codeText)
-                                        .font(Font.custom("PixelifySans-Bold", size: 16))
+                                        .font(Font.system(size: 16))
                                         .padding()
                                         .background(Color.gray.opacity(0.4))
                                         .cornerRadius(10)
                                         .foregroundColor(.white)
-                                    
+                                        .offset(y: 10)
                                     HStack(spacing: 15){
                                         Spacer() // Add spacer to push content to the center
                                         
                                         Button(action: {
                                             // Action to perform when the first button is tapped
                                             print("Button 1 tapped")
+                                            self.isButton1Tapped.toggle()
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                                               self.isButton1Tapped = false
+                                                           }
+                                            
                                         }) {
                                             Text("1")
                                                 .font(.headline)
                                                 .foregroundColor(.black)
                                                 .padding()
-                                                .background(Color.white)
+                                                .background(isButton1Tapped ? Color.red : Color.white)
                                                 .cornerRadius(10)
                                         }
                                         
                                         Button(action: {
                                             // Action to perform when the second button is tapped
                                             print("Button 3 tapped")
-                                            isActive = true
+                                            router.navigate(to: .scenario4)
                                         }) {
                                             Text("3")
                                                 .font(.headline)
@@ -91,19 +118,23 @@ struct Qmaha: View {
                                         Button(action: {
                                             // Action to perform when the third button is tapped
                                             print("Button 6 tapped")
+                                            self.isButton6Tapped.toggle()
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                                               self.isButton6Tapped = false
+                                                           }
                                         }) {
                                             Text("6")
                                                 .font(.headline)
                                                 .foregroundColor(.black)
                                                 .padding()
-                                                .background(Color.white)
+                                                .background(isButton6Tapped ? Color.red : Color.white)
                                                 .cornerRadius(10)
                                         }
                                         Spacer() // Add spacer to push content to the center
                                         
                                         
                                     }
-                                    .padding(.leading, 40)
+                                    .offset(y: 10)
                                     
                                 }
                                 .padding()
@@ -111,11 +142,36 @@ struct Qmaha: View {
                         }
                     }
                 }
-            }
+
             .onAppear {
                 UserDefaults.standard.set("Qmaha", forKey: "leftOff")
                     }
-        }
+        
+            .navigationTitle("Task 5")
+            .navigationBarBackButtonHidden()
+
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("Information")
+                        isShowingPopup.toggle()
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
 
             }
         }

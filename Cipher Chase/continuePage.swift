@@ -39,18 +39,16 @@ struct continuePage: View {
     @State var finalText: String =  """
   Congratulations, Elite Coders, on successfully conquering the Binary Addition Challenges in the Cryptic Code Chamber! Your precision and expertise have unlocked valuable fragments of information about The Encoder's encrypted messages, pushing us one step closer to unveiling the secrets behind "Project_Phoenix."
 
-  Now, brace yourselves for the next level of the challenge – the Code Tracing Game. Dive deeper into The Encoder's intricate coding labyrinth and trace the execution of complex code snippets. Your mission is to identify the values of variables at different points in the process, deciphering the encrypted logic that conceals critical details about The Encoder's grand plan.
 
-  Are you ready to showcase your coding acumen and lead the elite team to unravel the mysteries encoded within the holographic terminals? Embark on this Code Tracing Mission and prove that no algorithm is too complex for the elite coding team! May your analytical skills shine as you navigate through the encrypted layers of The Encoder's schemes. Good luck!
+  Are you ready to unlock the mystery within shifting shadows. Find the hidden path by decoding the correct shift. Experiment and let the decrypted shift guide your way forward.
+
 """
     
     @State var buttonText = "Solve"
+    @EnvironmentObject var router: Router
+
     
     var body: some View {
-        if  self.navigateToNextView{
-            traceView()
-        }else{
-            NavigationStack(path: $path) {
                 ZStack {
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
@@ -58,12 +56,13 @@ struct continuePage: View {
                     VStack {
                         GeometryReader { geometry in
                             Text(animateTitle)
-                                .font(Font.custom("PixelifySans-Bold", size: 16))
+                                .font(Font.system(size: 16))
                                 .padding(.horizontal)
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
                                 .padding([.leading, .trailing]) // Adjust padding as needed
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.white)
+                                .offset(y: -60)
                                 .onAppear{
                                     startAnimation()
                                 }
@@ -91,7 +90,7 @@ struct continuePage: View {
                                                 // Perform different actions based on the click count
                                                 switch self.clickCount {
                                                 case 1:
-                                                    navigateToNextView = true
+                                                    router.navigate(to: .maha)
                                                     // Add more cases for additional clicks if needed
                                                     
                                                 default:
@@ -118,20 +117,36 @@ struct continuePage: View {
                                 }
                         }
                     }
+                    
+                    Image("ones")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 200)
+                        .offset(y:225)
+                        .allowsHitTesting(false)
                 }
                 
                 
                 .contentShape(Rectangle())
-            }
-            .navigationBarHidden(true)  // Hide the navigation bar on this screen
             .onReceive([self.clickCount].publisher) { _ in
                 // Code to execute when clickCount changes
                 // You can print values or trigger animations here
                 print("Click count: \(clickCount)")
             }
-            
-        }
         
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
             
         }
     }

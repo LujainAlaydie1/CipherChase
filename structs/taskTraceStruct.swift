@@ -4,7 +4,6 @@
 //
 //  Created by Lujain Alaydie on 30/11/2023.
 //
-
 import Foundation
 import SwiftUI
 
@@ -31,7 +30,7 @@ struct taskTraceStruct: View{
                             .foregroundColor(.black)
                             .padding([.leading], (geometry.size.width * 2) / 5 )
                             .padding(.top)
-                            .font(Font.custom("AnonymousPro-Regular", size: 16))
+                            .font(Font.custom("AnonymousPro-Regular", size: 35))
                             .keyboardType(.numberPad)
                             .onTapGesture {
                                 someText = ""
@@ -44,7 +43,7 @@ struct taskTraceStruct: View{
             GeometryReader { geometry in
                 
                 Text(text)
-                    .font(Font.custom("AnonymousPro-Regular", size: 16))
+                    .font(Font.custom("AnonymousPro-Regular", size: 35))
                     .padding()
                     .foregroundColor(.black)
                     .frame(width: geometry.size.width, height: geometry.size.width)

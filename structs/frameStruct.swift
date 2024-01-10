@@ -11,6 +11,9 @@ struct frameStruct: View {
     @Binding var someText: String
     @State var binary: String
     var correctLetter: String
+    var correctPosition: Int
+    @State private var isCorrect: Bool = false
+    @Binding var enteredLetters: [String]
     var body: some View {
         
         HStack{
@@ -29,19 +32,31 @@ struct frameStruct: View {
                         .padding(.top)
                         .overlay(
                             TextField("   ", text: $someText)
-                                .foregroundColor(.black)
+                                .foregroundColor(isCorrect ? .black : .red)
                                 .padding([.leading], (geometry.size.width * 3) / 4 + 15)
                                 .padding(.top)
+                            
                                 .onChange(of: someText) {
-                                    if someText.count > 1 {
-                                        someText = String(someText.prefix(1))
-                                    }
+                                    limitToOneDigit()
+                                    updateCorrectness()
                                 }
                             
                         )
                 }
         }
         
+        
+        
+    }
+    
+    private func updateCorrectness() {
+        isCorrect = enteredLetters[correctPosition] == correctLetter
+    }
+
+    private func limitToOneDigit() {
+        if someText.count > 1 {
+            someText = String(someText.prefix(1))
+        }
     }
 }
 

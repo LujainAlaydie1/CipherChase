@@ -23,7 +23,7 @@ struct scenarioPageTask5: View {
     
     
     @State var indexValue = 0
-    @State var timeInterval: TimeInterval = 0.1
+    @State var timeInterval: TimeInterval = 0.01
     private var cancellables: Set<AnyCancellable> = []
     
     
@@ -76,33 +76,55 @@ struct scenarioPageTask5: View {
         
         if isFilled {
             print("All text fields are filled!")
-            checkCorrectness()
-        } else {
+            if checkCorrectness(){
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    router.navigate(to: .task5)
+                }
+            }        } else {
             print("Some text fields are empty.")
         }
     }
     
+    @EnvironmentObject var router: Router
+    @State private var isShowingPopup = false
+    @State private var progress: Double =  6.5 / 7
+    
     var body: some View {
-        if self.isActive{
-            winTask5()
-                .transition(.move(edge: .bottom))
-
-            
-        }else{
-            NavigationStack(path: $path) {
                 ZStack {
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
                     
-                    VStack {
+                    VStack(spacing: -20) {
+                        
+                        ZStack(alignment: .leading) {
+                            ProgressView(value: progress)
+                                .progressViewStyle(LinearProgressViewStyle())
+                                .accentColor(.accents) // Set the color for the filled part
+                            
+                            Image("trophey")
+                                .resizable()
+                                .scaledToFit() // Maintain the aspect ratio while resizing
+                                .frame(width: 21, height: 16)
+                                .offset(x: CGFloat(progress) * 370) // Adjust the offset based on the progress
+                        }
+                        
+                        .alert(isPresented: $isShowingPopup) {
+                            Alert(
+                                title: Text("Information"),
+                                message: Text("Decode the binary letters to figure out the word it spells"),
+                                dismissButton: .default(Text("OK"))
+                            )
+                        }
+                        
                         GeometryReader { geometry in
                             Text(animateTitle)
-                                .font(Font.custom("PixelifySans-Bold", size: 16))
+                                .font(Font.system(size: 16))
                                 .padding(.horizontal)
-                                .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
+                                .padding(.top, geometry.safeAreaInsets.top + 30) // Adjust for top safe area
                                 .padding([.leading, .trailing]) // Adjust padding as needed
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.white)
+                                .offset(y: -60)
                                 .onAppear{
                                     startAnimation()
                                 }
@@ -120,25 +142,33 @@ struct scenarioPageTask5: View {
                                     
                                     VStack{
                                         HStack{
-                                            frameStruct(someText: $enteredLetters[0], binary: "01010000", correctLetter: "P")
+                                            frameStruct(someText: $enteredLetters[0], binary: "01010000", correctLetter: "P", correctPosition: 0, enteredLetters: $enteredLetters)
                                         }
                                         HStack{
-                                            frameStruct(someText: $enteredLetters[1], binary: "01101000", correctLetter: "h")
+                                            frameStruct(someText: $enteredLetters[1], binary: "01101000", correctLetter: "H", correctPosition: 1, enteredLetters: $enteredLetters)
+
                                         }
                                         HStack{
-                                            frameStruct(someText: $enteredLetters[2], binary: "01101111", correctLetter: "o")
+                                            frameStruct(someText: $enteredLetters[2], binary: "01101111", correctLetter: "O", correctPosition: 2, enteredLetters: $enteredLetters)
+
+                                            
                                         }
                                         HStack{
-                                            frameStruct(someText: $enteredLetters[3], binary: "01100101", correctLetter: "e")
+                                            frameStruct(someText: $enteredLetters[3], binary: "01100101", correctLetter: "E", correctPosition: 3, enteredLetters: $enteredLetters)
+
                                         }
                                         HStack{
-                                            frameStruct(someText: $enteredLetters[4], binary: "01101110", correctLetter: "n")
+                                            frameStruct(someText: $enteredLetters[4], binary: "01101110", correctLetter: "N", correctPosition: 4, enteredLetters: $enteredLetters)
+
                                         }
                                         HStack{
-                                            frameStruct(someText: $enteredLetters[5], binary: "01101001", correctLetter: "i")
+                                            frameStruct(someText: $enteredLetters[5], binary: "01101001", correctLetter: "I", correctPosition: 5, enteredLetters: $enteredLetters)
+
                                         }
                                         HStack{
-                                            frameStruct(someText: $enteredLetters[6], binary: "01111000", correctLetter: "x")
+                                            frameStruct(someText: $enteredLetters[6], binary: "01111000", correctLetter: "X", correctPosition: 6, enteredLetters: $enteredLetters)
+
+                                            
                                         }
                                         .padding(.bottom)
                                         
@@ -165,26 +195,42 @@ struct scenarioPageTask5: View {
                     }
                     .contentShape(Rectangle())
                 }
-                .navigationBarHidden(true)  // Hide the navigation bar on this screen
-                
-                // Navigate to a different page when all correct letters are entered
-//                NavigationLink(
-//                    destination: winTask5(),  // Replace YourDestinationView with the view you want to navigate to
-//                    isActive: Binding(
-//                        get: { enteredLetters.allSatisfy { !$0.isEmpty } && checkCorrectness() == true },
-//                        set: { _ in }
-//                    )
-//                ) {
-//                    EmptyView()
-//                }
                 
                 
-            }
             .onAppear {
                 UserDefaults.standard.set("scenarioPageTask5", forKey: "leftOff")
                     }
-            
+        
+            .navigationTitle("Task 6")
+            .navigationBarBackButtonHidden()
+            .ignoresSafeArea(.keyboard, edges: .bottom) // Prevents UI from shifting when the keyboard appears
+            .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+
         }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("Information")
+                        isShowingPopup.toggle()
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+        
 
     }
       }

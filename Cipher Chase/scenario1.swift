@@ -16,7 +16,6 @@ struct scenario1: View {
     @State private var navigateToNextView = false
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var path = NavigationPath()
 
     
     func startAnimation(){
@@ -36,8 +35,11 @@ struct scenario1: View {
     @State var animateTitle: String = ""
     @State var finalText: String =  """
     The riddle alludes to the binary language, and keen-eyed players discern a binary sequence on the holographic note. Converting these binaries into ASCII, they uncover the word "59" the password.
+
     With seconds ticking away, they swiftly input "59" into the laptop. As the timer hits zero, the screen flickers, emitting a satisfying hum. The encrypted message transforms:
-    "Well done, decoders. The journey has just begun. Seek the heart of logic, where bugs await their demise."
+   
+ "Well done, decoders. The journey has just begun. Seek the heart of logic, where bugs await their demise."
+
     With the laptop unlocked, the elite coding team ventures forth to unravel the mysteries within the academy's virtual realm.
 """
     
@@ -51,25 +53,55 @@ Approaching the central server, lines of buggy code await. A holographic script 
     
     @State var buttonText = "Next"
     
+    @EnvironmentObject var router: Router
+
+    func styledText(for text: String) -> Text {
+        let pattern = try! NSRegularExpression(pattern: """
+                                                    ("Well done, decoders. The journey has just begun. Seek the heart of logic, where bugs await their demise.")|(Elite Coding Team)
+                                                    """)
+        let matches = pattern.matches(in: text, range: NSRange(text.startIndex..., in: text))
+
+        var styledText = Text("")
+        var currentIndex = text.startIndex
+
+        for match in matches {
+            let range = Range(match.range, in: text)!
+            let beforeText = Text(text[currentIndex..<range.lowerBound])
+                .font(Font.system(size: 16))
+                .foregroundColor(.white)
+
+            let matchText = Text(text[range])
+                .font(Font.system(size: 16))
+                .foregroundColor(.accents)
+
+            styledText = styledText + beforeText + matchText
+
+            currentIndex = range.upperBound
+        }
+
+        let remainingText = Text(text[currentIndex...])
+            .font(Font.system(size: 16))
+            .foregroundColor(.white)
+
+        return styledText + remainingText
+    }
+
+    
     var body: some View {
-        if  self.navigateToNextView{
-            task2()
-        }else{
-            NavigationStack(path: $path) {
                 ZStack {
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
-                    
-                    
+ 
                     VStack {
                         GeometryReader { geometry in
-                            Text(animateTitle)
-                                .font(Font.custom("PixelifySans-Bold", size: 16))
+                            styledText(for: animateTitle)
                                 .padding(.horizontal)
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
+                                .kerning(1.6)
                                 .padding([.leading, .trailing]) // Adjust padding as needed
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.white)
+                                .offset(y: -80)
                                 .onAppear{
                                     startAnimation()
                                 }
@@ -100,7 +132,9 @@ Approaching the central server, lines of buggy code await. A holographic script 
                                                     self.finalText = ""
                                                     self.finalText = """
                                                     As the Elite Coding Team unlocks the academy's entrance laptop, a holographic map reveals the next destination: the main server room. Neon code cascades as they enter, greeted by an unsettling hum of malfunctioning servers.
+                                                    
                                                     "The heart of the academy holds secrets and chaos. Debug the code to reveal the path. Your coding prowess is needed to restore order."
+                                                    
                                                     Approaching the central server, lines of buggy code await. A holographic script indicates that debugging is the key to uncover the next clue.
                                                     """
 
@@ -117,7 +151,7 @@ Approaching the central server, lines of buggy code await. A holographic script 
                                                     
                                                     
                                                 case 2:
-                                                    navigateToNextView = true
+                                                    router.navigate(to: .task2)
                                                     // Add more cases for additional clicks if needed
                                                     
                                                 default:
@@ -154,8 +188,7 @@ Approaching the central server, lines of buggy code await. A holographic script 
                 
                 
                 .contentShape(Rectangle())
-            }
-            .navigationBarHidden(true)  // Hide the navigation bar on this screen
+            
             .onReceive([self.clickCount].publisher) { _ in
                 // Code to execute when clickCount changes
                 // You can print values or trigger animations here
@@ -164,9 +197,22 @@ Approaching the central server, lines of buggy code await. A holographic script 
             .onAppear {
                 UserDefaults.standard.set("scenario1", forKey: "leftOff")
                     }
-            
-        }
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
         
+            
+ 
             
         }
     }

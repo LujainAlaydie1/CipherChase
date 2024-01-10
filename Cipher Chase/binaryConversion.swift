@@ -5,18 +5,16 @@
 //  Created by Lujain Alaydie on 28/11/2023.
 //
 
+
 import SwiftUI
 import Combine
 
 struct binaryConversion: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var path = NavigationPath()
-    @State var isActive: Bool = false
-
     
+    @State var isActive: Bool = false
     @State var animateTitle: String = ""
     @State var finalText: String = """
-    In the Cryptic Code Chamber, the holographic terminal presents a series of binary addition equations. The elite coding team's task is to calculate the binary sum for each equation correctly. Successfully solving these binary addition challenges will unlock crucial fragments of information about The Encoder's encrypted messages, bringing the team closer to unraveling the mysteries held within "Project_Phoenix."
+   In the Cryptic Code Chamber, the holographic terminal presents a series of binary addition equations. The elite coding team's task is to calculate the binary sum for each equation correctly. Successfully solving these binary addition challenges will unlock crucial fragments of information about The Encoder's encrypted messages, bringing the team closer to unraveling the mysteries held within "Project_Phoenix."
  """
     
     @State var showTextFieldAlert : Bool = false
@@ -28,6 +26,7 @@ struct binaryConversion: View {
     @State var answr: String = " "
     @State private var placeHolders1: [String] = ["","","",""]
     @State private var placeHolders2: [String] = ["","","",""]
+    @State private var enteredLetters2: [String] = ["","","",""]
 
     @State private var enteredLetters: [String] = ["","","",""]
     @State var empty = " "
@@ -86,36 +85,50 @@ struct binaryConversion: View {
         let isFilled = !enteredLetters.contains { $0.isEmpty }
         
         if isFilled {
-            checkCorrectness()
+            if checkCorrectness(){
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    router.navigate(to: .continueP)
+                }
+            }
         } else {
         }
     }
+    @EnvironmentObject var router: Router
+    @State private var isShowingPopup = false
+    @State private var progress: Double = 4 / 6
     
     var body: some View {
-        if self.isActive{
-            continuePage()
-                .transition(.move(edge: .bottom))
-            
-            
-        }else{
-            NavigationStack(path: $path) {
                 ZStack {
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
-                    
-                    
-                    
-                    
-                    
-                    VStack {
+                    VStack(spacing: -20) {
+                        ZStack(alignment: .leading) {
+                            ProgressView(value: progress)
+                                .progressViewStyle(LinearProgressViewStyle())
+                                .accentColor(.accents) // Set the color for the filled part
+                            
+                            Image("trophey")
+                                .resizable()
+                                .scaledToFit() // Maintain the aspect ratio while resizing
+                                .frame(width: 21, height: 16)
+                                .offset(x: CGFloat(progress) * 360) // Adjust the offset based on the progress
+                        }
+                        
+                        .alert(isPresented: $isShowingPopup) {
+                            Alert(
+                                title: Text("Information"),
+                                message: Text("Perform binary addition to find the answer."),
+                                dismissButton: .default(Text("OK"))
+                            )
+                        }
                         GeometryReader { geometry in
                             Text(animateTitle)
-                                .font(Font.custom("PixelifySans-Bold", size: 16))
+                                .font(Font.system(size: 16))
                                 .padding(.horizontal)
-                                .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
+                                .padding(.top, geometry.safeAreaInsets.top + 25) // Adjust for top safe area
                                 .padding([.leading, .trailing]) // Adjust padding as needed
+                                .offset(y: -100)
                             
-                        
                             
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.white)
@@ -127,7 +140,9 @@ struct binaryConversion: View {
                         Spacer()
                         
                         GeometryReader { geometry in
+                            ScrollView{
                             ZStack{
+                                
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 20)
                                         .foregroundColor(Color(white: 1, opacity: 0.14))
@@ -137,13 +152,17 @@ struct binaryConversion: View {
                                         .overlay {
                                             VStack(){
                                                 HStack{
-                                                    crosswordBlock(text: $one, someText: $placeHolders1[0], binary: "1",  x: false)
                                                     
-                                                    crosswordBlock(text: $one, someText: $placeHolders1[1], binary: "1", x: false)
+                                                    crosswordBlock(text: $one, someText: $placeHolders1[0], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
                                                     
-                                                    crosswordBlock(text: $zero, someText: $placeHolders1[2], binary: "1",  x: false)
                                                     
-                                                    crosswordBlock(text: $one, someText: $placeHolders1[3], binary: "1", x: false)
+                                                    crosswordBlock(text: $one, someText: $placeHolders1[1], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
+                                                    
+                                                    crosswordBlock(text: $zero, someText: $placeHolders1[2], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
+                                                    
+                                                    crosswordBlock(text: $one, someText: $placeHolders1[3], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
+                                                    
+                                                    
                                                     
                                                 }.padding([.trailing, .leading], geometry.size.width / 10)
                                                     .padding(.bottom, geometry.size.height / 5)
@@ -154,15 +173,18 @@ struct binaryConversion: View {
                                                     .padding(.top, geometry.size.height / -7)
                                                 
                                                     .padding(.bottom, geometry.size.height / 9)
-
+                                                
                                                 HStack{
-                                                    crosswordBlock(text: $one, someText: $placeHolders2[0], binary: "1",  x: false)
                                                     
-                                                    crosswordBlock(text: $zero, someText: $placeHolders2[1], binary: "1",  x: false)
                                                     
-                                                    crosswordBlock(text: $one, someText: $placeHolders2[2], binary: "1",  x: false)
+                                                    crosswordBlock(text: $one, someText: $placeHolders2[0], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
                                                     
-                                                    crosswordBlock(text: $one, someText: $placeHolders2[3], binary: "1",  x: false)
+                                                    
+                                                    crosswordBlock(text: $zero, someText: $placeHolders2[1], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
+                                                    
+                                                    crosswordBlock(text: $one, someText: $placeHolders2[2], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
+                                                    
+                                                    crosswordBlock(text: $one, someText: $placeHolders2[3], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters2, x: false)
                                                     
                                                 }.padding([.trailing, .leading], geometry.size.width / 10)
                                                     .padding(.bottom, geometry.size.height / 5)
@@ -175,34 +197,36 @@ struct binaryConversion: View {
                                                     .padding(.top, geometry.size.height / -7)
                                                 
                                                 HStack{
-                                                    crosswordBlock(text: $empty, someText: $enteredLetters[0], binary: "1",  x: true)
+                                                    crosswordBlock(text: $empty, someText: $enteredLetters[0], correctLetter: "1", correctPosition: 0, enteredLetters: $enteredLetters, x: true)
                                                     
-                                                    crosswordBlock(text: $empty, someText: $enteredLetters[1], binary: "1",  x: true)
+                                                    crosswordBlock(text: $empty, someText: $enteredLetters[1], correctLetter: "1", correctPosition: 1, enteredLetters: $enteredLetters, x: true)
                                                     
-                                                    crosswordBlock(text: $empty, someText: $enteredLetters[2], binary: "0",  x: true)
+                                                    crosswordBlock(text: $empty, someText: $enteredLetters[2], correctLetter: "0", correctPosition: 2, enteredLetters: $enteredLetters, x: true)
                                                     
-                                                    crosswordBlock(text: $empty, someText: $enteredLetters[3], binary: "0", x: true)
+                                                    crosswordBlock(text: $empty, someText: $enteredLetters[3], correctLetter: "0", correctPosition: 3, enteredLetters: $enteredLetters, x: true)
                                                     
                                                 }.padding([.trailing, .leading], geometry.size.width / 10)
                                                     .padding(.bottom, geometry.size.height / 5)
                                                     .padding(.top, geometry.size.height / -7)
-
-
-                                            }.padding([.top], geometry.size.height / 2)
-                                    
-                                    VStack{
-
+                                                
+                                                
+                                            }
+                                            .padding([.top], geometry.size.height / 2)
+                                         
+                                            Spacer()
                                             
-                                        }//VStack
-                                        Spacer()
-                                        
-                                    }.onReceive(enteredLetters.publisher, perform: { _ in
-                                        checkAllFilled()
-                                    })
+                                        }.onReceive(enteredLetters.publisher, perform: { _ in
+                                            checkAllFilled()
+                                        })
                                     
                                 }
+                                .offset(y:60)
+                            }
                                 .offset(y: -(geometry.size.height / 2.3))  // Adjust the value based on how much you want to lift it up
                             }
+                            .padding(.bottom, -100)
+                            .offset(y:-100)
+
                             
                             
                             
@@ -222,16 +246,40 @@ struct binaryConversion: View {
                             // Dismiss the keyboard
                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         }
+                    .ignoresSafeArea(.keyboard, edges: .all)
+
                     
                 }
-                .navigationBarHidden(true)  // Hide the navigation bar on this screen
                 
-            }
+    
             .onAppear {
                 UserDefaults.standard.set("binaryConversion", forKey: "leftOff")
                     }
-        }
-        
+            .navigationTitle("Task 4")
+            .navigationBarBackButtonHidden()
+
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("Information")
+                        isShowingPopup.toggle()
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
     }
 }
 
@@ -240,7 +288,3 @@ struct binaryConversion: View {
 #Preview {
     binaryConversion()
 }
-
-
-
-

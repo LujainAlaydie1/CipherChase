@@ -15,10 +15,6 @@ struct Senario_1_Amira: View {
 
     @State private var navigateToNextView = false
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var path = NavigationPath()
-
-    
     func startAnimation(){
         Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { timer in
             if indexValue < finalText.count{
@@ -34,6 +30,7 @@ struct Senario_1_Amira: View {
     @State var animateTitle: String = ""
     @State var finalText: String =  """
 The team quickly realizes that "2572" is the key to unlocking the puzzle.
+
 With the correct solution in mind, they interact with the holographic puzzle, inputting "2572" in the lock. The holographic door shimmers, and with a soft click, it swings open, granting access to the secret area beyond.
 """
     
@@ -55,13 +52,9 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
 """
     
     @State var buttonText = "Next"
-    
+    @EnvironmentObject var router: Router
+
     var body: some View {
-        if  self.navigateToNextView{
-            binaryConversion()
-            //related to maha's pages.
-        }else{
-            NavigationStack(path: $path) {
                 ZStack {
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
@@ -69,12 +62,13 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                     VStack {
                         GeometryReader { geometry in
                             Text(animateTitle)
-                                .font(Font.custom("PixelifySans-Bold", size: 16))
+                                .font(Font.system(size: 16))
                                 .padding(.horizontal)
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
                                 .padding([.leading, .trailing]) // Adjust padding as needed
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.white)
+                                .offset(y: -60)
                                 .onAppear{
                                     startAnimation()
                                 }
@@ -105,7 +99,9 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                                     self.finalText = ""
                                                     self.finalText = """
                                                     Inside the secret room, the atmosphere changes. Glowing terminals line the walls, each displaying encrypted files. The holographic map updates once again, pinpointing a particular encrypted file containing crucial information about The Encoder and their next move.
+                                                    
                                                     "Well done, Codebreakers! Your mastery of ciphers has granted you access to the vault of knowledge. Dive into the encrypted files, and the identity of The Encoder shall be revealed, along with their plans for the academy."
+                                                    
                                                     The elite coding team, fueled by determination, begins deciphering the encrypted files, uncovering the mysteries that will guide them through the next phase of their mission. The virtual room echoes with the hum of decryption, signaling that the answers they seek are within their grasp.
                                                     """
 
@@ -114,30 +110,11 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                                         self.indexValue = 0
                                                         self.startAnimation()
                                                     }
-                                              
-                                                    // Add your custom action here
-                                                    
-                                                case 2:
-                                                    // Action for the second click
-                                                    self.finalText = thirdFinal
-                                                    print(self.finalText)
-                                                    self.animateTitle = ""
-                                                    self.indexValue = 0
-                                                    self.startAnimation()
-                                                    self.buttonText = "Next"
-                                                    // Add your custom action here
-                                                case 3:
-                                                    // Action for the second click
-                                                    self.finalText = forthFinal
-                                                    print(self.finalText)
-                                                    self.animateTitle = ""
-                                                    self.indexValue = 0
-                                                    self.startAnimation()
                                                     self.buttonText = "Solve"
-                                                    // Add your custom action here
+
                                                     
                                                 case 4:
-                                                    navigateToNextView = true
+                                                    router.navigate(to: .binaryconvert)
                                                     // Add more cases for additional clicks if needed
                                                 
                                                 default:
@@ -175,8 +152,7 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                 
                 
                 .contentShape(Rectangle())
-            }
-            .navigationBarHidden(true)  // Hide the navigation bar on this screen
+            
             .onReceive([self.clickCount].publisher) { _ in
                 // Code to execute when clickCount changes
                 // You can print values or trigger animations here
@@ -186,7 +162,21 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
             .onAppear {
                 UserDefaults.standard.set("Senarios Amira", forKey: "leftOff")
                     }
-        }
+        
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        router.navigateToRoot()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+        
         }
     }
 

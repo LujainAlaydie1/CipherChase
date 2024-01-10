@@ -14,6 +14,8 @@
 		247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEAA2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift */; };
 		247DDEB52B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEB42B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift */; };
 		247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */; };
+		2491FF072B4C1BC100B066BE /* binaryConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491FF062B4C1BC100B066BE /* binaryConversion.swift */; };
+		2491FF092B4C46A000B066BE /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491FF082B4C46A000B066BE /* router.swift */; };
 		24A4C4002B123727006701A7 /* endScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C3FF2B123727006701A7 /* endScenario.swift */; };
 		24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
 		24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
@@ -47,9 +49,6 @@
 		B1B6E0AD2B20F1CA0029188E /* taskTraceStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E0A62B20F1C90029188E /* taskTraceStruct.swift */; };
 		B1B6E0AE2B20F1CA0029188E /* winframeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E0A72B20F1CA0029188E /* winframeStruct.swift */; };
 		B1B6E0AF2B20F1CA0029188E /* customAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E0A82B20F1CA0029188E /* customAlert.swift */; };
-		B1B6E0B22B20F1EB0029188E /* traceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E0B12B20F1EB0029188E /* traceView.swift */; };
-		B1B6E0B42B20F2000029188E /* binaryConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E0B32B20F2000029188E /* binaryConversion.swift */; };
-		B1B6E0B62B20F7170029188E /* task4q.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E0B52B20F7170029188E /* task4q.swift */; };
 		B1B6E0B82B20F94D0029188E /* AnonymousPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1B6E0B72B20F94D0029188E /* AnonymousPro-Bold.ttf */; };
 		B1B6E0BA2B20FA590029188E /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1B6E0B92B20FA590029188E /* AnonymousPro-Regular.ttf */; };
 		B1B6E0BD2B20FA6A0029188E /* PixelifySans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1B6E0BB2B20FA690029188E /* PixelifySans-Bold.ttf */; };
@@ -85,6 +84,8 @@
 		247DDEB02B0E3B0600BDDCEC /* Cipher ChaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipher ChaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247DDEB42B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseUITests.swift; sourceTree = "<group>"; };
 		247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2491FF062B4C1BC100B066BE /* binaryConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = binaryConversion.swift; sourceTree = "<group>"; };
+		2491FF082B4C46A000B066BE /* router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
 		24A4C3FF2B123727006701A7 /* endScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endScenario.swift; sourceTree = "<group>"; };
 		24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cipher-Chase-Info.plist"; sourceTree = SOURCE_ROOT; };
 		24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoStruct.swift; sourceTree = "<group>"; };
@@ -110,9 +111,6 @@
 		B1B6E0A62B20F1C90029188E /* taskTraceStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taskTraceStruct.swift; sourceTree = "<group>"; };
 		B1B6E0A72B20F1CA0029188E /* winframeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winframeStruct.swift; sourceTree = "<group>"; };
 		B1B6E0A82B20F1CA0029188E /* customAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customAlert.swift; sourceTree = "<group>"; };
-		B1B6E0B12B20F1EB0029188E /* traceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = traceView.swift; path = ../../../Downloads/traceView.swift; sourceTree = "<group>"; };
-		B1B6E0B32B20F2000029188E /* binaryConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = binaryConversion.swift; path = ../../../Downloads/binaryConversion.swift; sourceTree = "<group>"; };
-		B1B6E0B52B20F7170029188E /* task4q.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = task4q.swift; sourceTree = "<group>"; };
 		B1B6E0B72B20F94D0029188E /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
 		B1B6E0B92B20FA590029188E /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
 		B1B6E0BB2B20FA690029188E /* PixelifySans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PixelifySans-Bold.ttf"; sourceTree = "<group>"; };
@@ -187,16 +185,15 @@
 				B1B6E0872B20BDF30029188E /* scenario2.swift */,
 				B1B6E07B2B20AA320029188E /* Task3.swift */,
 				B1B6E0792B20A9D40029188E /* Senarios Amira.swift */,
-				B1B6E0B32B20F2000029188E /* binaryConversion.swift */,
+				2491FF062B4C1BC100B066BE /* binaryConversion.swift */,
 				B1B6E0C12B20FBAC0029188E /* continuePage.swift */,
-				B1B6E0B12B20F1EB0029188E /* traceView.swift */,
-				B1B6E0B52B20F7170029188E /* task4q.swift */,
 				B1B6E08C2B20CB4C0029188E /* Qmaha.swift */,
 				B1B6E08B2B20CB4B0029188E /* mahas_senarios.swift */,
 				24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */,
 				24E9DCA92B114F84005E6D56 /* winTask5.swift */,
 				24A4C3FF2B123727006701A7 /* endScenario.swift */,
 				247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */,
+				2491FF082B4C46A000B066BE /* router.swift */,
 				247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */,
 				247DDE9F2B0E3B0600BDDCEC /* Preview Content */,
 			);
@@ -419,8 +416,8 @@
 				B1B6E0AA2B20F1CA0029188E /* crosswordStruct.swift in Sources */,
 				B1B6E0C22B20FBAC0029188E /* continuePage.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
-				B1B6E0B62B20F7170029188E /* task4q.swift in Sources */,
 				B1B6E0842B20AD860029188E /* startPage.swift in Sources */,
+				2491FF092B4C46A000B066BE /* router.swift in Sources */,
 				B1B6E0812B20AD860029188E /* MainPage.swift in Sources */,
 				B1B6E08E2B20CB4C0029188E /* mahas_senarios.swift in Sources */,
 				24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */,
@@ -434,12 +431,11 @@
 				B1B6E08F2B20CB4C0029188E /* Qmaha.swift in Sources */,
 				24A4C4002B123727006701A7 /* endScenario.swift in Sources */,
 				B1B6E0892B20BDF30029188E /* task2.swift in Sources */,
-				B1B6E0B22B20F1EB0029188E /* traceView.swift in Sources */,
 				24E9DCAA2B114F84005E6D56 /* winTask5.swift in Sources */,
 				B1B6E0AF2B20F1CA0029188E /* customAlert.swift in Sources */,
 				B1B6E0882B20BDF30029188E /* scenario1.swift in Sources */,
 				B1B6E0832B20AD860029188E /* scenarioPagesH.swift in Sources */,
-				B1B6E0B42B20F2000029188E /* binaryConversion.swift in Sources */,
+				2491FF072B4C1BC100B066BE /* binaryConversion.swift in Sources */,
 				B1B6E0AD2B20F1CA0029188E /* taskTraceStruct.swift in Sources */,
 				B1B6E0822B20AD860029188E /* crosswordTask1.swift in Sources */,
 			);
