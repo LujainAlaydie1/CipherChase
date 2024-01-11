@@ -35,10 +35,8 @@ struct MainPage: View {
                return AnyView(scenarioPagesH())
            case "crosswordTask1":
                return AnyView(crosswordTask1())
-               
            case "scenario1":
                return AnyView(scenario1())
-               
            case "task2":
                return AnyView(task2())
            case "scenario2":
@@ -60,6 +58,21 @@ struct MainPage: View {
                return AnyView(binaryConversion())
            case "continuePage":
                return AnyView(continuePage())
+               
+           case "progress1":
+               return AnyView(progressTracking())
+           case "progress2":
+               return AnyView(progressTracking2())
+           case "progress3":
+               return AnyView(progressTracking3())
+           case "progress4":
+               return AnyView(progressTracking4())
+           case "progress5":
+               return AnyView(progressTracking5())
+           case "progress6":
+               return AnyView(progressTracking6())
+           case "progress0":
+               return AnyView(progressTrackingBefore())
 
                // Handle other cases similarly
 
@@ -180,8 +193,26 @@ struct MainPage: View {
                                 case "scenarioPageTask5":
                                     router.navigate(to: .scenario5)
                              
-
-                                case .none:
+                                case "progress1":
+                                    router.navigate(to: .progress1)
+                                    
+                                case "progress2":
+                                    router.navigate(to: .progress2)
+                                    
+                                case "progress3":
+                                    router.navigate(to: .progress3)
+                                    
+                                case "progress4":
+                                    router.navigate(to: .progress4)
+                                    
+                                case "progress5":
+                                    router.navigate(to: .progress5)
+                                    
+                                case "progress6":
+                                    router.navigate(to: .progress6)
+                                    
+                                case "progress0":
+                                    router.navigate(to: .progress0)                                case .none:
                                     break
                                 case .some(_):
                                     break

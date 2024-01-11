@@ -143,7 +143,7 @@ struct scenarioPagesH: View {
                                                     
                                                 case 2:
                                                     // Action for the second click
-                                                    router.navigate(to: .crosswordTask)
+                                                    router.navigate(to: .progress0)
                                                     // Add more cases for additional clicks if needed
                                                     
                                                     

@@ -152,7 +152,7 @@ struct winTask5: View {
                                                 )
                                                 .offset(x: 20, y: 200)
                                                 .onTapGesture {
-                                                    router.navigate(to: .ending)
+                                                    router.navigate(to: .progress6)
                                                 }
 
                                                                             

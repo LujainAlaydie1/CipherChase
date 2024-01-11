@@ -80,7 +80,7 @@ struct crosswordTask1: View {
             print("All text fields are filled!")
             if checkCorrectness(){
                 DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    router.navigate(to: .scenarios1)
+                    router.navigate(to: .progress1)
                 }
             }
         }
@@ -122,29 +122,31 @@ struct crosswordTask1: View {
         ZStack{
             Color(.background)
                 .edgesIgnoringSafeArea(.all)
+            
+            .alert(isPresented: $isShowingPopup) {
+                Alert(
+                    title: Text("Information"),
+                    message: Text("try to decode the binary number to its equivalent decimal number."),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
+            
+            
             ScrollView{
                 VStack(spacing: -20){
                     
-                    ZStack(alignment: .leading) {
-                        ProgressView(value: progress)
-                            .progressViewStyle(LinearProgressViewStyle())
-                            .accentColor(.accents) // Set the color for the filled part
-                        
-                        Image("trophey")
-                            .resizable()
-                            .scaledToFit() // Maintain the aspect ratio while resizing
-                            .frame(width: 21, height: 16)
-                            .offset(x: CGFloat(progress) * 200) // Adjust the offset based on the progress
-                    }
-                    
-                    .alert(isPresented: $isShowingPopup) {
-                        Alert(
-                            title: Text("Information"),
-                            message: Text("try to decode the binary number to its equivalent decimal number."),
-                            dismissButton: .default(Text("OK"))
-                        )
-                    }
-                    
+//                    ZStack(alignment: .leading) {
+//                        ProgressView(value: progress)
+//                            .progressViewStyle(LinearProgressViewStyle())
+//                            .accentColor(.accents) // Set the color for the filled part
+//                        
+//                        Image("trophey")
+//                            .resizable()
+//                            .scaledToFit() // Maintain the aspect ratio while resizing
+//                            .frame(width: 21, height: 16)
+//                            .offset(x: CGFloat(progress) * 200) // Adjust the offset based on the progress
+//                    }
+
                     
                     
                     GeometryReader { geometry in
@@ -253,7 +255,7 @@ struct crosswordTask1: View {
                         print("Information")
                         isShowingPopup.toggle()
                     } label: {
-                        Image(systemName: "info.circle")
+                        Image(systemName: "lightbulb")
                             .foregroundColor(.white)
                     }
                 }

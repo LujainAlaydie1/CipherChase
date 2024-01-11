@@ -26,6 +26,13 @@ final class Router: ObservableObject {
         case scenario5
         case task5
         case ending
+        case progress1
+        case progress2
+        case progress3
+        case progress4
+        case progress5
+        case progress6
+        case progress0
     }
     
     @Published var navPath = NavigationPath()

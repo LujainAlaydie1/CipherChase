@@ -145,10 +145,6 @@ Approaching the central server, lines of buggy code await. A holographic script 
                                                     }
                                                     buttonText = "Solve"
                                               
-                                                    // Add your custom action here
-                                                    
-                                                
-                                                    
                                                     
                                                 case 2:
                                                     router.navigate(to: .task2)

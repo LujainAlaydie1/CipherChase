@@ -24,38 +24,75 @@ struct Cipher_ChaseApp: App {
                 SplashScreen()
                     .navigationDestination(for: Router.Destination.self) { destination in
                         switch destination {
+                            
                         case .mainPage:
                             MainPage()
+                            
                         case .Startpage:
                             startPage()
+                            
                         case .scenariopagesh:
                             scenarioPagesH()
+                            
                         case .crosswordTask:
                             crosswordTask1()
+                            
                         case .scenarios1:
                             scenario1()
+                            
                         case .task2:
                             task2()
+                            
                         case .scenarios2:
                             scenario2()
+                            
                         case .tassk3:
                             Task3()
                         case .scenario3:
                             Senario_1_Amira()
+                            
                         case .binaryconvert:
                             binaryConversion()
+                            
                         case .continueP:
                             continuePage()
+                            
                         case .maha:
                             Qmaha()
+                            
                         case .scenario4:
                             mahas_senarios()
+                            
                         case .scenario5:
                             scenarioPageTask5()
+                            
                         case .task5:
                             winTask5()
+                            
                         case .ending:
                             endScenario()
+                            
+                        case .progress1:
+                            progressTracking()
+                            
+                        case .progress2:
+                            progressTracking2()
+
+                        case .progress3:
+                            progressTracking3()
+
+                        case .progress4:
+                            progressTracking4()
+
+                        case .progress5:
+                            progressTracking5()
+
+                        case .progress6:
+                            progressTracking6()
+                            
+                        case .progress0:
+                            progressTrackingBefore()
+
                         }
                         
                     }

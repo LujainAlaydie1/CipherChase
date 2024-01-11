@@ -50,28 +50,15 @@ struct Qmaha: View {
                     Color(.sRGB, red: 2/255, green: 49/255, blue: 69/255)
                         .edgesIgnoringSafeArea(.all)
                     
+                        .alert(isPresented: $isShowingPopup) {
+                            Alert(
+                                title: Text("Information"),
+                                message: Text("Find the correct decryption shift."),
+                                dismissButton: .default(Text("OK"))
+                            )
+                        }
+                        
                         VStack(spacing: -20) {
-                            
-                            ZStack(alignment: .leading) {
-                                ProgressView(value: progress)
-                                    .progressViewStyle(LinearProgressViewStyle())
-                                    .accentColor(.accents) // Set the color for the filled part
-                                
-                                Image("trophey")
-                                    .resizable()
-                                    .scaledToFit() // Maintain the aspect ratio while resizing
-                                    .frame(width: 21, height: 16)
-                                    .offset(x: CGFloat(progress) * 370) // Adjust the offset based on the progress
-                            }
-                            
-                            .alert(isPresented: $isShowingPopup) {
-                                Alert(
-                                    title: Text("Information"),
-                                    message: Text("Find the correct decryption shift."),
-                                    dismissButton: .default(Text("OK"))
-                                )
-                            }
-                            
                         GeometryReader { geometry in
                             ScrollView {
                                 VStack(alignment: .leading) {
@@ -105,7 +92,7 @@ struct Qmaha: View {
                                         Button(action: {
                                             // Action to perform when the second button is tapped
                                             print("Button 3 tapped")
-                                            router.navigate(to: .scenario4)
+                                            router.navigate(to: .progress5)
                                         }) {
                                             Text("3")
                                                 .font(.headline)
@@ -156,7 +143,7 @@ struct Qmaha: View {
                         print("Information")
                         isShowingPopup.toggle()
                     } label: {
-                        Image(systemName: "info.circle")
+                        Image(systemName: "lightbulb")
                             .foregroundColor(.white)
                     }
                 }

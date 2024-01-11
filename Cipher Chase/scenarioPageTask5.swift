@@ -93,21 +93,6 @@ struct scenarioPageTask5: View {
                 ZStack {
                     Color(.background)
                         .edgesIgnoringSafeArea(.all)
-                    
-                    VStack(spacing: -20) {
-                        
-                        ZStack(alignment: .leading) {
-                            ProgressView(value: progress)
-                                .progressViewStyle(LinearProgressViewStyle())
-                                .accentColor(.accents) // Set the color for the filled part
-                            
-                            Image("trophey")
-                                .resizable()
-                                .scaledToFit() // Maintain the aspect ratio while resizing
-                                .frame(width: 21, height: 16)
-                                .offset(x: CGFloat(progress) * 370) // Adjust the offset based on the progress
-                        }
-                        
                         .alert(isPresented: $isShowingPopup) {
                             Alert(
                                 title: Text("Information"),
@@ -115,6 +100,10 @@ struct scenarioPageTask5: View {
                                 dismissButton: .default(Text("OK"))
                             )
                         }
+                    VStack(spacing: -20) {
+                        
+                        
+                      
                         
                         GeometryReader { geometry in
                             Text(animateTitle)
@@ -201,7 +190,6 @@ struct scenarioPageTask5: View {
                 UserDefaults.standard.set("scenarioPageTask5", forKey: "leftOff")
                     }
         
-            .navigationTitle("Task 6")
             .navigationBarBackButtonHidden()
             .ignoresSafeArea(.keyboard, edges: .bottom) // Prevents UI from shifting when the keyboard appears
             .onTapGesture {
@@ -214,7 +202,7 @@ struct scenarioPageTask5: View {
                         print("Information")
                         isShowingPopup.toggle()
                     } label: {
-                        Image(systemName: "info.circle")
+                        Image(systemName: "lightbulb")
                             .foregroundColor(.white)
                     }
                 }

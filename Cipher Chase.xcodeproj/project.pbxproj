@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		247BF40C2B4EBE1A00F8967A /* wigglyLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF40B2B4EBE1A00F8967A /* wigglyLine.swift */; };
+		247BF40E2B4EBE4C00F8967A /* progressTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF40D2B4EBE4C00F8967A /* progressTracking.swift */; };
+		247BF4102B4F6A1E00F8967A /* progressTracking2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF40F2B4F6A1E00F8967A /* progressTracking2.swift */; };
+		247BF4122B4F6A2500F8967A /* progressTracking3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4112B4F6A2500F8967A /* progressTracking3.swift */; };
+		247BF4142B4F6A2B00F8967A /* progressTracking4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4132B4F6A2B00F8967A /* progressTracking4.swift */; };
+		247BF4162B4F6A3000F8967A /* progressTracking6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4152B4F6A3000F8967A /* progressTracking6.swift */; };
+		247BF4182B4F6A3700F8967A /* progressTracking5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4172B4F6A3700F8967A /* progressTracking5.swift */; };
+		247BF41A2B4F6CC500F8967A /* progressTrackingBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4192B4F6CC500F8967A /* progressTrackingBefore.swift */; };
 		247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */; };
 		247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */; };
 		247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */; };
@@ -74,6 +82,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		247BF40B2B4EBE1A00F8967A /* wigglyLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wigglyLine.swift; sourceTree = "<group>"; };
+		247BF40D2B4EBE4C00F8967A /* progressTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking.swift; sourceTree = "<group>"; };
+		247BF40F2B4F6A1E00F8967A /* progressTracking2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking2.swift; sourceTree = "<group>"; };
+		247BF4112B4F6A2500F8967A /* progressTracking3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking3.swift; sourceTree = "<group>"; };
+		247BF4132B4F6A2B00F8967A /* progressTracking4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking4.swift; sourceTree = "<group>"; };
+		247BF4152B4F6A3000F8967A /* progressTracking6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking6.swift; sourceTree = "<group>"; };
+		247BF4172B4F6A3700F8967A /* progressTracking5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking5.swift; sourceTree = "<group>"; };
+		247BF4192B4F6CC500F8967A /* progressTrackingBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTrackingBefore.swift; sourceTree = "<group>"; };
 		247DDE962B0E3B0500BDDCEC /* Cipher Chase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Chase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseApp.swift; sourceTree = "<group>"; };
 		247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -179,18 +195,25 @@
 				B1B6E07D2B20AD860029188E /* MainPage.swift */,
 				B1B6E0802B20AD860029188E /* startPage.swift */,
 				B1B6E07F2B20AD860029188E /* scenarioPagesH.swift */,
+				247BF4192B4F6CC500F8967A /* progressTrackingBefore.swift */,
 				B1B6E07E2B20AD860029188E /* crosswordTask1.swift */,
+				247BF40D2B4EBE4C00F8967A /* progressTracking.swift */,
 				B1B6E0852B20BDF30029188E /* scenario1.swift */,
 				B1B6E0862B20BDF30029188E /* task2.swift */,
+				247BF40F2B4F6A1E00F8967A /* progressTracking2.swift */,
 				B1B6E0872B20BDF30029188E /* scenario2.swift */,
 				B1B6E07B2B20AA320029188E /* Task3.swift */,
+				247BF4112B4F6A2500F8967A /* progressTracking3.swift */,
 				B1B6E0792B20A9D40029188E /* Senarios Amira.swift */,
 				2491FF062B4C1BC100B066BE /* binaryConversion.swift */,
+				247BF4132B4F6A2B00F8967A /* progressTracking4.swift */,
 				B1B6E0C12B20FBAC0029188E /* continuePage.swift */,
 				B1B6E08C2B20CB4C0029188E /* Qmaha.swift */,
+				247BF4172B4F6A3700F8967A /* progressTracking5.swift */,
 				B1B6E08B2B20CB4B0029188E /* mahas_senarios.swift */,
 				24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */,
 				24E9DCA92B114F84005E6D56 /* winTask5.swift */,
+				247BF4152B4F6A3000F8967A /* progressTracking6.swift */,
 				24A4C3FF2B123727006701A7 /* endScenario.swift */,
 				247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */,
 				2491FF082B4C46A000B066BE /* router.swift */,
@@ -241,6 +264,7 @@
 			children = (
 				24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */,
 				24E9DCDA2B11B87A005E6D56 /* sparkles.swift */,
+				247BF40B2B4EBE1A00F8967A /* wigglyLine.swift */,
 			);
 			path = SVGStructures;
 			sourceTree = "<group>";
@@ -413,21 +437,28 @@
 				B1B6E07C2B20AA320029188E /* Task3.swift in Sources */,
 				24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				B1B6E08A2B20BDF30029188E /* scenario2.swift in Sources */,
+				247BF4182B4F6A3700F8967A /* progressTracking5.swift in Sources */,
 				B1B6E0AA2B20F1CA0029188E /* crosswordStruct.swift in Sources */,
 				B1B6E0C22B20FBAC0029188E /* continuePage.swift in Sources */,
 				247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */,
 				B1B6E0842B20AD860029188E /* startPage.swift in Sources */,
+				247BF4102B4F6A1E00F8967A /* progressTracking2.swift in Sources */,
 				2491FF092B4C46A000B066BE /* router.swift in Sources */,
 				B1B6E0812B20AD860029188E /* MainPage.swift in Sources */,
+				247BF40E2B4EBE4C00F8967A /* progressTracking.swift in Sources */,
 				B1B6E08E2B20CB4C0029188E /* mahas_senarios.swift in Sources */,
 				24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */,
+				247BF4122B4F6A2500F8967A /* progressTracking3.swift in Sources */,
+				247BF4142B4F6A2B00F8967A /* progressTracking4.swift in Sources */,
 				247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */,
 				B1B6E0AC2B20F1CA0029188E /* customButton.swift in Sources */,
+				247BF41A2B4F6CC500F8967A /* progressTrackingBefore.swift in Sources */,
 				24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */,
 				24E9DCDB2B11B87A005E6D56 /* sparkles.swift in Sources */,
 				B1B6E07A2B20A9D40029188E /* Senarios Amira.swift in Sources */,
 				B1B6E0AB2B20F1CA0029188E /* frameStruct.swift in Sources */,
 				B1B6E0AE2B20F1CA0029188E /* winframeStruct.swift in Sources */,
+				247BF4162B4F6A3000F8967A /* progressTracking6.swift in Sources */,
 				B1B6E08F2B20CB4C0029188E /* Qmaha.swift in Sources */,
 				24A4C4002B123727006701A7 /* endScenario.swift in Sources */,
 				B1B6E0892B20BDF30029188E /* task2.swift in Sources */,
@@ -438,6 +469,7 @@
 				2491FF072B4C1BC100B066BE /* binaryConversion.swift in Sources */,
 				B1B6E0AD2B20F1CA0029188E /* taskTraceStruct.swift in Sources */,
 				B1B6E0822B20AD860029188E /* crosswordTask1.swift in Sources */,
+				247BF40C2B4EBE1A00F8967A /* wigglyLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
