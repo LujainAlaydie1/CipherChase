@@ -300,6 +300,7 @@ struct crosswordBlockH: View{
             .frame(width: 50, height: 50)
             .background(Color.white)
             .cornerRadius(7)
+            
     }
 }
 
@@ -315,7 +316,7 @@ struct frameStructH: View {
     var body: some View {
         HStack {
             Rectangle()
-                .foregroundColor(.clear)
+                .foregroundColor(.white)
                 .frame(width: 50, height: 50)
                 .background(Color.white)
                 .cornerRadius(5)
@@ -325,6 +326,8 @@ struct frameStructH: View {
                         .font(Font.custom("AnonymousPro-Bold", size: 35))
                         .fontWeight(.bold)
                         .padding(.leading, 15)
+                        .background(Color.white) // Set background color to white
+
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.numberPad)
                         .onChange(of: someText) { newText in

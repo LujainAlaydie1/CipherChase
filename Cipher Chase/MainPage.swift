@@ -243,7 +243,7 @@ struct MainPage: View {
             .background(Color.logocolor)
             .frame(width: 190, height: 50)
             .foregroundStyle(.secondarys)
-            .font(Font.custom("PixelifySans-Bold", size: 32))
+            .font(Font.system(size: 32))
             .cornerRadius(15)
             .shadow(color: Color.secondarys, radius: 0, x: 5, y: 7)
     }
