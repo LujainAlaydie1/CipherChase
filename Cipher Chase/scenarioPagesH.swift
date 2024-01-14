@@ -34,14 +34,13 @@ struct scenarioPagesH: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-    "As the Elite Coding Team steps into the virtual lobby of the coding academy, they are greeted by the faint humming of servers and the glow of neon code scrolling across digital billboards. In the center of the lobby lies an unassuming laptop, its screen displaying a mysterious message:
-    "Cracked minds seek truth, but only those with the code can reveal it. Your journey begins here, Unlock the secrets within"
+Elite Coding Team enters a virtual coding academy lobby, finds a laptop with a mysterious message from The Encoder. The laptop is pin-protected with a countdown timer, prompting a race to unlock its secrets. The room is filled with holographic code displays and neon lights, and a riddle on the floor.
+
+"Cracked minds seek truth, but only those with the code can reveal it. Your journey begins here, Unlock the secrets within"
 """
     
-     let secondFianl = "The laptop seems to be the first puzzle left by The Encoder. As the players approach, they notice the laptop is pin-protected, and a digital timer starts counting down. It's a race against the clock. The room is filled with holographic displays of code snippets and flickering neon lights. The players spot a holographic note on the floor, revealing a riddle."
-
     
-    @State var buttonText = "Next"
+    @State var buttonText = "Solve"
     
     @EnvironmentObject var router: Router
 
@@ -128,23 +127,7 @@ struct scenarioPagesH: View {
                                                 // Perform different actions based on the click count
                                                 switch self.clickCount {
                                                 case 1:
-                                                    self.finalText = ""
-                                                    self.finalText = """
-                                                    The laptop seems to be the first puzzle left by The Encoder. As the players approach, they notice the laptop is pin-protected, and a digital timer starts counting down. It's a race against the clock. \nThe room is filled with holographic displays of code snippets and flickering neon lights. The players spot a holographic note on the floor, revealing a riddle
-                                                    """
-                                                    
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                                        self.animateTitle = ""
-                                                        self.indexValue = 0
-                                                        self.startAnimation()
-                                                    }
-                                                    self.buttonText = "Solve"
-                                                    // Add your custom action here
-                                                    
-                                                case 2:
-                                                    // Action for the second click
                                                     router.navigate(to: .progress0)
-                                                    // Add more cases for additional clicks if needed
                                                     
                                                     
                                                 default:

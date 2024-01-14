@@ -293,7 +293,7 @@ struct crosswordBlockH: View{
     
     var body: some View{
         Text(text)
-            .font(Font.custom("AnonymousPro-Bold", size: 35)) //"AnonymousPro-Bold" or "PixelifySans-Bold"
+            .font(Font.custom("AnonymousPro-Bold.ttf", size: 35)) //"AnonymousPro-Bold" or "PixelifySans-Bold"
             .fontWeight(.bold)
             .padding()
             .foregroundColor(.black)
@@ -323,7 +323,7 @@ struct frameStructH: View {
                 .overlay(
                     TextField("   ", text: $someText)
                         .foregroundColor(isCorrect ? .black : .red) // Set text color based on correctness
-                        .font(Font.custom("AnonymousPro-Bold", size: 35))
+                        .font(Font.custom("AnonymousPro-Bold.ttf", size: 35))
                         .fontWeight(.bold)
                         .padding(.leading, 15)
                         .background(Color.white) // Set background color to white

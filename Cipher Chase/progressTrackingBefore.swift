@@ -30,7 +30,7 @@ struct progressTrackingBefore: View {
                             .resizable()
                             .scaledToFit() // Maintain the aspect ratio while resizing
                             .frame(width: 21, height: 16)
-                            .offset(x: CGFloat(progress) * 520) // Adjust the offset based on the progress
+                            .offset(x: CGFloat(progress) * 580) // Adjust the offset based on the progress
                     }
                 }
                 
@@ -193,7 +193,7 @@ struct progressTrackingBefore: View {
                                         router.navigate(to: .crosswordTask)
                                     }) {
                                         Text("Next")
-                                            .font(Font.custom("PixelifySans-Bold", size: 22))
+                                            .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                             .foregroundColor(.secondarys)
                                             .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                             .background(

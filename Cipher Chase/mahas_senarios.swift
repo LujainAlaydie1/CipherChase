@@ -35,12 +35,45 @@ struct mahas_senarios: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-Upon successfully decrypting the file, the team unveils a message that provides insight into The Encoder's plans for the academy:
+Successfully decoding the file reveals The Encoder's plan for the academy:
 
-"The Phoenix project aims to infiltrate the core logic of the academy's security system. The Encoder plans to exploit vulnerabilities and gain control. Beware, decoders, the next level awaits, and the Phoenix is ready to spread its wings."
+"The Phoenix project aims to infiltrate the core logic of the academy's security system, exploiting vulnerabilities to gain control. Beware, decoders, as the next level awaits, and the Phoenix is ready to spread its wings."
 
-The virtual room echoes with the team's successful decryption, urging them to prepare for the imminent threat posed by The Encoder's Phoenix project. The holographic map updates, directing the team to the next level, where they will face even greater challenges in their mission to safeguard the academy's digital realm.
+The holographic map updates, guiding the team to face greater challenges. Exiting the secret room, their success reverberates, leading them to the ominous control room. The Encoder challenges them with a Binary Battle, testing their coding prowess in the realm of zeros and ones to glimpse the true nature of The Phoenix.
+
+"Decipher this seven-letter code, Decoders. In its essence lies the key to The Phoenix's true nature."
 """
+    
+    
+    func styledText(for text: String) -> Text {
+        let pattern = try! NSRegularExpression(pattern: """
+                                                    ("The Phoenix project aims to infiltrate the core logic of the academy's security system, exploiting vulnerabilities to gain control. Beware, decoders, as the next level awaits, and the Phoenix is ready to spread its wings.")|("Decipher this seven-letter code, Decoders. In its essence lies the key to The Phoenix's true nature.")
+                                                    """)
+        let matches = pattern.matches(in: text, range: NSRange(text.startIndex..., in: text))
+
+        var styledText = Text("")
+        var currentIndex = text.startIndex
+
+        for match in matches {
+            let range = Range(match.range, in: text)!
+            let beforeText = Text(text[currentIndex..<range.lowerBound])
+                .font(Font.system(size: 16))
+                .foregroundColor(.white)
+
+            let matchText = Text(text[range])
+                .font(Font.system(size: 16))
+                .foregroundColor(.accents)
+
+            styledText = styledText + beforeText + matchText
+
+            currentIndex = range.upperBound
+        }
+
+        let remainingText = Text(text[currentIndex...])
+            .font(Font.system(size: 16))
+            .foregroundColor(.white)
+        return styledText + remainingText
+    }
     
     
     
@@ -54,7 +87,7 @@ The virtual room echoes with the team's successful decryption, urging them to pr
             
             VStack {
                 GeometryReader { geometry in
-                    Text(animateTitle)
+                    styledText(for: animateTitle)
                         .font(Font.system(size: 16))
                         .padding(.horizontal)
                         .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
@@ -99,32 +132,9 @@ The virtual room echoes with the team's successful decryption, urging them to pr
                                         // Perform different actions based on the click count
                                         switch self.clickCount {
                                         case 1:
-                                            self.finalText = ""
-                                            self.finalText = """
-                                                    As the elite coding team emerges from the secret room, their success in decrypting the "Project_Phoenix" file reverberates through the virtual environment. The holographic map guides them to the control room, where an ominous atmosphere awaits. The room is adorned with glowing terminals and a towering holographic display.
-                                                    
-                                                    As the team approaches, The Encoder's sinister laughter echoes through the digital corridors, and a holographic projection materializes before them.
-                                                    
-                                                    "Impressive, Decoders. But can you withstand the Binary Battle? Here, in the realm of zeros and ones, your coding prowess will be put to the ultimate test. Decode my binary sequences if you dare, and perhaps you shall glimpse the true nature of The Phoenix."
-                                                    """
-                                            buttonText = "Solve"
-                                            
-                                            
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                                self.animateTitle = ""
-                                                self.indexValue = 0
-                                                self.startAnimation()
-                                            }
-                                            
-                                            // Add your custom action here
-                                            
-                                            
-                                            
-                                            
-                                        case 2:
                                             router.navigate(to: .scenario5)
-                                            // Add more cases for additional clicks if needed
-                                            
+
+        
                                         default:
                                             // Default action for subsequent clicks
                                             print("Clicked again!")
@@ -132,7 +142,7 @@ The virtual room echoes with the team's successful decryption, urging them to pr
                                         }
                                     }) {
                                         Text(buttonText)
-                                            .font(Font.custom("PixelifySans-Bold", size: 22))
+                                            .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                             .foregroundColor(.secondarys)
                                             .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                             .background(

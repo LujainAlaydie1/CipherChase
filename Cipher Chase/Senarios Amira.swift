@@ -29,29 +29,44 @@ struct Senario_1_Amira: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-The team quickly realizes that "2572" is the key to unlocking the puzzle.
+The team discovers "A0C" as the puzzle key. Inputting it, the holographic door opens to a secret room with glowing terminals. The updated map reveals an encrypted file holding crucial information about The Encoder:
 
-With the correct solution in mind, they interact with the holographic puzzle, inputting "2572" in the lock. The holographic door shimmers, and with a soft click, it swings open, granting access to the secret area beyond.
-"""
-    
-     let secondFianl = """
-Inside the secret room, the atmosphere changes. Glowing terminals line the walls, each displaying encrypted files. The holographic map updates once again, pinpointing a particular encrypted file containing crucial information about The Encoder and their next move.
 "Well done, Codebreakers! Your mastery of ciphers has granted you access to the vault of knowledge. Dive into the encrypted files, and the identity of The Encoder shall be revealed, along with their plans for the academy."
-The elite coding team, fueled by determination, begins deciphering the encrypted files, uncovering the mysteries that will guide them through the next phase of their mission. The virtual room echoes with the hum of decryption, signaling that the answers they seek are within their grasp.
+
+They dive into the files, determined to uncover The Encoder's identity and plans for the academy. The virtual room echoes with decryption, signaling the answers are within reach.
 """
     
-    let thirdFinal = """
-As the elite coding team delves into the encrypted files within the secret room, they discover a trove of information. The holographic terminals display intricate lines of code, each requiring their expert decoding skills.
-The holographic map pinpoints a specific encrypted file labeled "Project_Phoenix." Intrigued, the team focuses their attention on decrypting this file, knowing it holds the key to understanding The Encoder's grand plan.
-"""
-    let forthFinal = """
-The encrypted file appears as a complex algorithm, interweaving binary, hexadecimal, and intricate patterns. The holographic message materializes:
-    "The Phoenix rises in the realm of logic. Crack the code, unveil its wings, and the truth shall soar."
-    The team understands that deciphering this file is critical to uncovering The Encoder's next move. With each successful decryption, fragments of The Encoder's identity and their motives come to light.
-     
-"""
+    func styledText(for text: String) -> Text {
+        let pattern = try! NSRegularExpression(pattern: """
+                                                    ("Well done, Codebreakers! Your mastery of ciphers has granted you access to the vault of knowledge. Dive into the encrypted files, and the identity of The Encoder shall be revealed, along with their plans for the academy.")|("A0C")
+                                                    """)
+        let matches = pattern.matches(in: text, range: NSRange(text.startIndex..., in: text))
+
+        var styledText = Text("")
+        var currentIndex = text.startIndex
+
+        for match in matches {
+            let range = Range(match.range, in: text)!
+            let beforeText = Text(text[currentIndex..<range.lowerBound])
+                .font(Font.system(size: 16))
+                .foregroundColor(.white)
+
+            let matchText = Text(text[range])
+                .font(Font.system(size: 16))
+                .foregroundColor(.accents)
+
+            styledText = styledText + beforeText + matchText
+
+            currentIndex = range.upperBound
+        }
+
+        let remainingText = Text(text[currentIndex...])
+            .font(Font.system(size: 16))
+            .foregroundColor(.white)
+        return styledText + remainingText
+    }
     
-    @State var buttonText = "Next"
+    @State var buttonText = "Solve"
     @EnvironmentObject var router: Router
 
     var body: some View {
@@ -61,7 +76,7 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                     
                     VStack {
                         GeometryReader { geometry in
-                            Text(animateTitle)
+                            styledText(for: animateTitle)
                                 .font(Font.system(size: 16))
                                 .padding(.horizontal)
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
@@ -96,26 +111,7 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                                 // Perform different actions based on the click count
                                                 switch self.clickCount {
                                                 case 1:
-                                                    self.finalText = ""
-                                                    self.finalText = """
-                                                    Inside the secret room, the atmosphere changes. Glowing terminals line the walls, each displaying encrypted files. The holographic map updates once again, pinpointing a particular encrypted file containing crucial information about The Encoder and their next move.
-                                                    
-                                                    "Well done, Codebreakers! Your mastery of ciphers has granted you access to the vault of knowledge. Dive into the encrypted files, and the identity of The Encoder shall be revealed, along with their plans for the academy."
-                                                    
-                                                    The elite coding team, fueled by determination, begins deciphering the encrypted files, uncovering the mysteries that will guide them through the next phase of their mission. The virtual room echoes with the hum of decryption, signaling that the answers they seek are within their grasp.
-                                                    """
-
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                                        self.animateTitle = ""
-                                                        self.indexValue = 0
-                                                        self.startAnimation()
-                                                    }
-                                                    self.buttonText = "Solve"
-
-                                                    
-                                                case 4:
                                                     router.navigate(to: .binaryconvert)
-                                                    // Add more cases for additional clicks if needed
                                                 
                                                 default:
                                                     // Default action for subsequent clicks
@@ -124,7 +120,7 @@ The encrypted file appears as a complex algorithm, interweaving binary, hexadeci
                                                 }
                                             }) {
                                                 Text(buttonText)
-                                                    .font(Font.custom("PixelifySans-Bold", size: 22))
+                                                    .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                                     .foregroundColor(.secondarys)
                                                     .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                                     .background(

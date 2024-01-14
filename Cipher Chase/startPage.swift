@@ -11,7 +11,11 @@ struct startPage: View {
     
     //@State private var someText = ""
     @State var animateTitle: String = ""
-    @State var finalText: String = "In the dark corners of the digital world, an enigmatic figure known as The Encoder has infiltrated a renowned coding academy, leaving a trail of corrupted programs and vanished data. The academy, seeking the help of the most skilled coders, assembles a team of elite programmers to unravel the mystery behind The Encoder's malicious activities."
+    @State var finalText: String = """
+    In the dark corners of the digital world, an enigmatic figure known as The Encoder has infiltrated a renowned coding academy, leaving a trail of corrupted programs and vanished data.
+    
+The academy, seeking the help of the most skilled coders, assembles a team of elite programmers to unravel the mystery behind The Encoder's malicious activities.
+"""
     
     
     

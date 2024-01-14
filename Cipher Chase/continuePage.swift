@@ -37,10 +37,7 @@ struct continuePage: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-  Congratulations, Elite Coders, on successfully conquering the Binary Addition Challenges in the Cryptic Code Chamber! Your precision and expertise have unlocked valuable fragments of information about The Encoder's encrypted messages, pushing us one step closer to unveiling the secrets behind "Project_Phoenix."
-
-
-  Are you ready to unlock the mystery within shifting shadows. Find the hidden path by decoding the correct shift. Experiment and let the decrypted shift guide your way forward.
+Unlock the captivating mystery within the ever-shifting shadows. Skillfully find the hidden path by deciphering the correct shift. Courageously experiment, allowing the decrypted shift to gracefully guide your way forward through the intriguing unknown.
 
 """
     
@@ -100,7 +97,7 @@ struct continuePage: View {
                                                 }
                                             }) {
                                                 Text(buttonText)
-                                                    .font(Font.custom("PixelifySans-Bold", size: 22))
+                                                    .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                                     .foregroundColor(.secondarys)
                                                     .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                                     .background(

@@ -36,7 +36,7 @@ struct SplashScreen: View {
                         
                         
                         Text("Cipher Chase")
-                            .font(Font.custom("PixelifySans-Bold", size: 32))
+                            .font(Font.custom("PixelifySans-Bold.ttf", size: 32))
                             .position(x: geometry.size.width / 2, y: (geometry.size.height / 2) + 30)
                             .shadow(color: Color.black, radius: 4, x: 4, y: 3)
                             .foregroundStyle(

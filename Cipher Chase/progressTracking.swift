@@ -30,7 +30,7 @@ struct progressTracking: View {
                             .resizable()
                             .scaledToFit() // Maintain the aspect ratio while resizing
                             .frame(width: 21, height: 16)
-                            .offset(x: CGFloat(progress) * 400) // Adjust the offset based on the progress
+                            .offset(x: CGFloat(progress) * 450) // Adjust the offset based on the progress
                     }
                 }
                 
@@ -192,7 +192,7 @@ struct progressTracking: View {
                                          router.navigate(to: .scenarios1)
                                      }) {
                                          Text("Next")
-                                             .font(Font.custom("PixelifySans-Bold", size: 22))
+                                             .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                              .foregroundColor(.secondarys)
                                              .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                              .background(

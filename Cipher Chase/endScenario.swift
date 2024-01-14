@@ -37,31 +37,49 @@ struct endScenario: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-    The elite coding team, undeterred by The Encoder's ominous challenge, engages in the Binary Battle. The holographic display flickers, revealing a complex binary sequence.
-
-    "Decipher this seven-letter code, Decoders. In its essence lies the key to The Phoenix's true nature."
-
-    Fingers dance over keyboards, decoding the binary puzzle. As the final letter falls into place, the room trembles. 
-The holographic projection of The Encoder reacts, sinister laughter replaced by an unsettling silence.
-
-    Success opens a virtual doorway, transporting the team to the final confrontation in the heart of the virtual realm.
-
- Towering lines of code surround them, forming The Encoder's master code. The challenge is set: decipher this code, unveil The Encoder's identity, and save the coding academy.
+   Undeterred by The Encoder's challenge, the elite coding team engages in the Binary Battle. Deciphering the complex seven-letter code, they unveil the key to The Phoenix's true nature.
+   
+Success opens a virtual doorway to the final confrontation in the heart of the virtual realm. Delving into The Encoder's master code, they unveil the identity and save the academy.
+    The holographic map updates one last time, displaying a message of triumph:
+  
+ "Codebreakers, you have restored balance to the digital realm. The academy is secure, and your coding legacy lives on."
+   
+The virtual realm transforms, achieving newfound stability. The holographic map displays a triumphant message, and the elite team stands in the serene environment, marking the end of their epic journey to safeguard the coding academy.
 """
     
-     let secondFianl = """
-With unwavering determination, the elite coding team delves into the master code. As each line unravels, a revelation emerges. The identity of The Encoder is unveiled, and the virtual realm trembles with the triumph of the Decoders.
-In a dazzling display, the virtual realm transforms. The servers hum in harmony, glitches dissipate, and the academy's digital core pulses with newfound stability. The mission is complete, and the coding academy is saved from the grasp of The Encoder.
-"""
-    
-    let thirdFinal = """
-The holographic map updates one last time, displaying a message of triumph: "Codebreakers, you have restored balance to the digital realm. The academy is secure, and your coding legacy lives on."
+    func styledText(for text: String) -> Text {
+        let pattern = try! NSRegularExpression(pattern: """
+                                                    ("Codebreakers, you have restored balance to the digital realm. The academy is secure, and your coding legacy lives on.")
+                                                    """)
+        let matches = pattern.matches(in: text, range: NSRange(text.startIndex..., in: text))
 
-The virtual doorway closes behind them, leaving the elite coding team standing in the now serene virtual environment. The echoes of their success resonate, marking the end of their epic journey to safeguard the coding academy.
+        var styledText = Text("")
+        var currentIndex = text.startIndex
 
-"""
+        for match in matches {
+            let range = Range(match.range, in: text)!
+            let beforeText = Text(text[currentIndex..<range.lowerBound])
+                .font(Font.system(size: 16))
+                .foregroundColor(.white)
+
+            let matchText = Text(text[range])
+                .font(Font.system(size: 16))
+                .foregroundColor(.accents)
+
+            styledText = styledText + beforeText + matchText
+
+            currentIndex = range.upperBound
+        }
+
+        let remainingText = Text(text[currentIndex...])
+            .font(Font.system(size: 16))
+            .foregroundColor(.white)
+        return styledText + remainingText
+    }
     
-    @State var buttonText = "Next"
+   
+    
+    @State var buttonText = "End"
     @EnvironmentObject var router: Router
 
     var body: some View {
@@ -71,7 +89,7 @@ The virtual doorway closes behind them, leaving the elite coding team standing i
                     
                     VStack {
                         GeometryReader { geometry in
-                            Text(animateTitle)
+                            styledText(for: animateTitle)
                                 .font(Font.system(size: 16))
                                 .padding(.horizontal)
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
@@ -106,35 +124,7 @@ The virtual doorway closes behind them, leaving the elite coding team standing i
                                                 // Perform different actions based on the click count
                                                 switch self.clickCount {
                                                 case 1:
-                                                    self.finalText = ""
-                                                    self.finalText = """
-                                                    With unwavering determination, the elite coding team delves into the master code. As each line unravels, a revelation emerges. The identity of The Encoder is unveiled, and the virtual realm trembles with the triumph of the Decoders.
-                                                    
-                                                    In a dazzling display, the virtual realm transforms. The servers hum in harmony, glitches dissipate, and the academy's digital core pulses with newfound stability. The mission is complete, and the coding academy is saved from the grasp of The Encoder.
-                                                    """
-
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                                        self.animateTitle = ""
-                                                        self.indexValue = 0
-                                                        self.startAnimation()
-                                                    }
-                                              
-                                                    // Add your custom action here
-                                                    
-                                                case 2:
-                                                    // Action for the second click
-                                                    self.finalText = thirdFinal
-                                                    print(self.finalText)
-                                                    self.animateTitle = ""
-                                                    self.indexValue = 0
-                                                    self.startAnimation()
-                                                    self.buttonText = "End"
-                                                    // Add your custom action here
-                                                    
-                                                    
-                                                case 3:
                                                     router.navigateToRoot()
-                                                    // Add more cases for additional clicks if needed
                                                     
                                                 default:
                                                     // Default action for subsequent clicks
@@ -143,7 +133,7 @@ The virtual doorway closes behind them, leaving the elite coding team standing i
                                                 }
                                             }) {
                                                 Text(buttonText)
-                                                    .font(Font.custom("PixelifySans-Bold", size: 22))
+                                                    .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                                     .foregroundColor(.secondarys)
                                                     .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                                     .background(

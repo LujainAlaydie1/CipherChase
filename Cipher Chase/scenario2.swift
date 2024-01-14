@@ -35,22 +35,45 @@ struct scenario2: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-   As the elite coding team fixes the bug-infested code, a virtual doorway materializes, unlocking the next stage of their journey. The holographic map updates, marking their progress.
-
-   "Congratulations, decoders! Your keen debugging skills restored order. The door to the next destination is open in your quest to unveil academy mysteries."
-
-   The map reveals the "Logic Labyrinth." The team steps through the virtual doorway, leaving echoes of fixed code behind, ready for the challenges ahead.
-"""
-    
-     let secondFianl = """
-Upon leaving the main server room, the elite coding team follows the holographic map to a mysterious locked room. The entrance is adorned with a holographic puzzle, glowing with binary and hexadecimal code. The holographic message materializes:
+The elite coders fix buggy code, unveiling a virtual doorway that marks progress. The map congratulates their debugging skills and introduces the "Logic Labyrinth." The team enters, leaving the server room behind. Following the map, they find a locked room with a holographic puzzle, challenging them to decrypt the code for the next phase. The holographic message materializes:
 
 "A ciphered challenge guards the door to the next phase of your journey. Decrypt the code within, and the secrets you seek shall be revealed."
 
-As the team examines the holographic puzzle, they notice a series of binary and hexadecimal digits arranged in a grid, forming an intricate pattern. A riddle appears alongside the puzzle:
+The intricate pattern, a mix of binary and hexadecimal digits, awaits their deciphering skills along with a accompanying riddle.
 """
     
     
+    func styledText(for text: String) -> Text {
+        let pattern = try! NSRegularExpression(pattern: """
+                                                    ("A ciphered challenge guards the door to the next phase of your journey. Decrypt the code within, and the secrets you seek shall be revealed.")|(The elite coders)
+                                                    """)
+        let matches = pattern.matches(in: text, range: NSRange(text.startIndex..., in: text))
+
+        var styledText = Text("")
+        var currentIndex = text.startIndex
+
+        for match in matches {
+            let range = Range(match.range, in: text)!
+            let beforeText = Text(text[currentIndex..<range.lowerBound])
+                .font(Font.system(size: 16))
+                .foregroundColor(.white)
+
+            let matchText = Text(text[range])
+                .font(Font.system(size: 16))
+                .foregroundColor(.accents)
+
+            styledText = styledText + beforeText + matchText
+
+            currentIndex = range.upperBound
+        }
+
+        let remainingText = Text(text[currentIndex...])
+            .font(Font.system(size: 16))
+            .foregroundColor(.white)
+        return styledText + remainingText
+    }
+    
+
     
     @State var buttonText = "Next"
     @EnvironmentObject var router: Router
@@ -63,7 +86,7 @@ As the team examines the holographic puzzle, they notice a series of binary and 
                     
                     VStack {
                         GeometryReader { geometry in
-                            Text(animateTitle)
+                            styledText(for: animateTitle)
                                 .padding(.horizontal)
                                 .font(Font.system(size: 16))
                                 .padding(.top, geometry.safeAreaInsets.top) // Adjust for top safe area
@@ -98,28 +121,8 @@ As the team examines the holographic puzzle, they notice a series of binary and 
                                                 // Perform different actions based on the click count
                                                 switch self.clickCount {
                                                 case 1:
-                                                    self.finalText = ""
-                                                    self.finalText = """
-                                                    The holographic map updates one last time, displaying a message of triumph: "Codebreakers, you have restored balance to the digital realm. The academy is secure, and your coding legacy lives on."
-                                                    
-                                                    The virtual doorway closes behind them, leaving the elite coding team standing in the now serene virtual environment. The echoes of their success resonate, marking the end of their epic journey to safeguard the coding academy.
-                                                    """
-
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                                        self.animateTitle = ""
-                                                        self.indexValue = 0
-                                                        self.startAnimation()
-                                                    }
-                                                    buttonText = "Solve"
-                                              
-                                                    // Add your custom action here
-                                                    
-                                                
-                                                    
-                                                    
-                                                case 2:
                                                     router.navigate(to: .tassk3)
-                                                    // Add more cases for additional clicks if needed
+
                                                     
                                                 default:
                                                     // Default action for subsequent clicks
@@ -128,7 +131,7 @@ As the team examines the holographic puzzle, they notice a series of binary and 
                                                 }
                                             }) {
                                                 Text(buttonText)
-                                                    .font(Font.custom("PixelifySans-Bold", size: 22))
+                                                    .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                                     .foregroundColor(.secondarys)
                                                     .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                                     .background(

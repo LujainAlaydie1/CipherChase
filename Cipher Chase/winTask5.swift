@@ -57,7 +57,7 @@ struct winTask5: View {
                                 .offset(x: geometry.size.width / 7, y: -(geometry.size.height / 15))  // Adjust the value based on how much you want to lift it up
                                 .overlay{
                                     Text("Phoenix")
-                                        .font(.custom("PixelifySans-Bold", size: 36))
+                                        .font(.custom("PixelifySans-Bold.ttf", size: 36))
                                         .lineLimit(1)
                                         .frame(alignment: .leading)
                                         .multilineTextAlignment(.center)
@@ -141,7 +141,7 @@ struct winTask5: View {
                                 .offset(x: 25, y: 205)
                                         .overlay{
                                             Text("Next")
-                                                .font(Font.custom("PixelifySans-Bold", size: 22))
+                                                .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                                 .foregroundColor(.secondarys)
                                                 .frame(width: geometry.size.width / 4, height: geometry.size.height / 8)
                                             

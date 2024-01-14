@@ -15,6 +15,7 @@
 		247BF4162B4F6A3000F8967A /* progressTracking6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4152B4F6A3000F8967A /* progressTracking6.swift */; };
 		247BF4182B4F6A3700F8967A /* progressTracking5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4172B4F6A3700F8967A /* progressTracking5.swift */; };
 		247BF41A2B4F6CC500F8967A /* progressTrackingBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BF4192B4F6CC500F8967A /* progressTrackingBefore.swift */; };
+		247BF4262B52F34200F8967A /* phoenix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 247BF4252B52F34200F8967A /* phoenix.gif */; };
 		247DDE9A2B0E3B0500BDDCEC /* Cipher_ChaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */; };
 		247DDE9C2B0E3B0500BDDCEC /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */; };
 		247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247DDE9D2B0E3B0600BDDCEC /* Assets.xcassets */; };
@@ -26,20 +27,13 @@
 		2491FF092B4C46A000B066BE /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491FF082B4C46A000B066BE /* router.swift */; };
 		24A4C4002B123727006701A7 /* endScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C3FF2B123727006701A7 /* endScenario.swift */; };
 		24DA7A362B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
-		24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
-		24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */; };
 		24DA7A3B2B0F85A800AB24EB /* scenarioPageTask5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */; };
 		24E9DCAA2B114F84005E6D56 /* winTask5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCA92B114F84005E6D56 /* winTask5.swift */; };
 		24E9DCAF2B119E93005E6D56 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E9DCAE2B119E93005E6D56 /* FLAnimatedImage */; };
 		24E9DCB12B119EB3005E6D56 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E9DCB02B119EB3005E6D56 /* FLAnimatedImage */; };
 		24E9DCB32B119EBF005E6D56 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E9DCB22B119EBF005E6D56 /* FLAnimatedImage */; };
-		24E9DCC52B11B106005E6D56 /* phoenix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24E9DCC42B11B106005E6D56 /* phoenix.gif */; };
-		24E9DCC62B11B106005E6D56 /* phoenix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24E9DCC42B11B106005E6D56 /* phoenix.gif */; };
-		24E9DCC72B11B106005E6D56 /* phoenix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24E9DCC42B11B106005E6D56 /* phoenix.gif */; };
 		24E9DCD72B11B5D4005E6D56 /* gifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCD62B11B5D4005E6D56 /* gifView.swift */; };
 		24E9DCDB2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
-		24E9DCDC2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
-		24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9DCDA2B11B87A005E6D56 /* sparkles.swift */; };
 		B1B6E07A2B20A9D40029188E /* Senarios Amira.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E0792B20A9D40029188E /* Senarios Amira.swift */; };
 		B1B6E07C2B20AA320029188E /* Task3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E07B2B20AA320029188E /* Task3.swift */; };
 		B1B6E0812B20AD860029188E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6E07D2B20AD860029188E /* MainPage.swift */; };
@@ -90,6 +84,7 @@
 		247BF4152B4F6A3000F8967A /* progressTracking6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking6.swift; sourceTree = "<group>"; };
 		247BF4172B4F6A3700F8967A /* progressTracking5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTracking5.swift; sourceTree = "<group>"; };
 		247BF4192B4F6CC500F8967A /* progressTrackingBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressTrackingBefore.swift; sourceTree = "<group>"; };
+		247BF4252B52F34200F8967A /* phoenix.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = phoenix.gif; path = "Cipher Chase/phoenix.gif"; sourceTree = "<group>"; };
 		247DDE962B0E3B0500BDDCEC /* Cipher Chase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Chase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247DDE992B0E3B0500BDDCEC /* Cipher_ChaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_ChaseApp.swift; sourceTree = "<group>"; };
 		247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -107,7 +102,6 @@
 		24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoStruct.swift; sourceTree = "<group>"; };
 		24DA7A3A2B0F85A800AB24EB /* scenarioPageTask5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scenarioPageTask5.swift; sourceTree = "<group>"; };
 		24E9DCA92B114F84005E6D56 /* winTask5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winTask5.swift; sourceTree = "<group>"; };
-		24E9DCC42B11B106005E6D56 /* phoenix.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = phoenix.gif; path = ../../Downloads/phoenix.gif; sourceTree = "<group>"; };
 		24E9DCD62B11B5D4005E6D56 /* gifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifView.swift; sourceTree = "<group>"; };
 		24E9DCDA2B11B87A005E6D56 /* sparkles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkles.swift; sourceTree = "<group>"; };
 		B1B6E0792B20A9D40029188E /* Senarios Amira.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Senarios Amira.swift"; sourceTree = "<group>"; };
@@ -165,10 +159,7 @@
 		247DDE8D2B0E3B0500BDDCEC = {
 			isa = PBXGroup;
 			children = (
-				24E9DCDE2B11C336005E6D56 /* structs */,
-				24E9DCC42B11B106005E6D56 /* phoenix.gif */,
-				24DA7A392B0F7D4700AB24EB /* SVGStructures */,
-				24DA7A2F2B0EA55E00AB24EB /* Font */,
+				247BF4252B52F34200F8967A /* phoenix.gif */,
 				247DDE982B0E3B0500BDDCEC /* Cipher Chase */,
 				247DDEA92B0E3B0600BDDCEC /* Cipher ChaseTests */,
 				247DDEB32B0E3B0600BDDCEC /* Cipher ChaseUITests */,
@@ -189,6 +180,19 @@
 		247DDE982B0E3B0500BDDCEC /* Cipher Chase */ = {
 			isa = PBXGroup;
 			children = (
+				B1B6E0A32B20F1C90029188E /* crosswordStruct.swift */,
+				B1B6E0A82B20F1CA0029188E /* customAlert.swift */,
+				B1B6E0A52B20F1C90029188E /* customButton.swift */,
+				B1B6E0A42B20F1C90029188E /* frameStruct.swift */,
+				B1B6E0A62B20F1C90029188E /* taskTraceStruct.swift */,
+				B1B6E0A72B20F1CA0029188E /* winframeStruct.swift */,
+				B1B6E0BB2B20FA690029188E /* PixelifySans-Bold.ttf */,
+				B1B6E0BC2B20FA6A0029188E /* PixelifySans-Regular.ttf */,
+				B1B6E0B92B20FA590029188E /* AnonymousPro-Regular.ttf */,
+				B1B6E0B72B20F94D0029188E /* AnonymousPro-Bold.ttf */,
+				24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */,
+				24E9DCDA2B11B87A005E6D56 /* sparkles.swift */,
+				247BF40B2B4EBE1A00F8967A /* wigglyLine.swift */,
 				24DA7A342B0EA6FF00AB24EB /* Cipher-Chase-Info.plist */,
 				24E9DCD62B11B5D4005E6D56 /* gifView.swift */,
 				247DDE9B2B0E3B0500BDDCEC /* SplashScreen.swift */,
@@ -246,40 +250,6 @@
 				247DDEB62B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift */,
 			);
 			path = "Cipher ChaseUITests";
-			sourceTree = "<group>";
-		};
-		24DA7A2F2B0EA55E00AB24EB /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				B1B6E0BB2B20FA690029188E /* PixelifySans-Bold.ttf */,
-				B1B6E0BC2B20FA6A0029188E /* PixelifySans-Regular.ttf */,
-				B1B6E0B92B20FA590029188E /* AnonymousPro-Regular.ttf */,
-				B1B6E0B72B20F94D0029188E /* AnonymousPro-Bold.ttf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		24DA7A392B0F7D4700AB24EB /* SVGStructures */ = {
-			isa = PBXGroup;
-			children = (
-				24DA7A352B0F7CDF00AB24EB /* logoStruct.swift */,
-				24E9DCDA2B11B87A005E6D56 /* sparkles.swift */,
-				247BF40B2B4EBE1A00F8967A /* wigglyLine.swift */,
-			);
-			path = SVGStructures;
-			sourceTree = "<group>";
-		};
-		24E9DCDE2B11C336005E6D56 /* structs */ = {
-			isa = PBXGroup;
-			children = (
-				B1B6E0A32B20F1C90029188E /* crosswordStruct.swift */,
-				B1B6E0A82B20F1CA0029188E /* customAlert.swift */,
-				B1B6E0A52B20F1C90029188E /* customButton.swift */,
-				B1B6E0A42B20F1C90029188E /* frameStruct.swift */,
-				B1B6E0A62B20F1C90029188E /* taskTraceStruct.swift */,
-				B1B6E0A72B20F1CA0029188E /* winframeStruct.swift */,
-			);
-			path = structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				247DDEA12B0E3B0600BDDCEC /* Preview Assets.xcassets in Resources */,
-				24E9DCC52B11B106005E6D56 /* phoenix.gif in Resources */,
+				247BF4262B52F34200F8967A /* phoenix.gif in Resources */,
 				B1B6E0BE2B20FA6A0029188E /* PixelifySans-Regular.ttf in Resources */,
 				247DDE9E2B0E3B0600BDDCEC /* Assets.xcassets in Resources */,
 				B1B6E0BA2B20FA590029188E /* AnonymousPro-Regular.ttf in Resources */,
@@ -415,7 +385,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E9DCC62B11B106005E6D56 /* phoenix.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +392,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E9DCC72B11B106005E6D56 /* phoenix.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,8 +446,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				247DDEAB2B0E3B0600BDDCEC /* Cipher_ChaseTests.swift in Sources */,
-				24DA7A372B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
-				24E9DCDC2B11B87A005E6D56 /* sparkles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,8 +453,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E9DCDD2B11B87A005E6D56 /* sparkles.swift in Sources */,
-				24DA7A382B0F7CDF00AB24EB /* logoStruct.swift in Sources */,
 				247DDEB72B0E3B0600BDDCEC /* Cipher_ChaseUITestsLaunchTests.swift in Sources */,
 				247DDEB52B0E3B0600BDDCEC /* Cipher_ChaseUITests.swift in Sources */,
 			);
@@ -637,7 +601,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "../phoenix.gif Cipher\\ Chase/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = phoenix.gif;
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -676,7 +640,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "../phoenix.gif Cipher\\ Chase/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = phoenix.gif;
 				DEVELOPMENT_TEAM = 39WLZF4HUU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -120,7 +120,7 @@ struct Task3: View {
                                 }
                             }
                             
-                            Text("Write the scrambled letters on the first box to create a hexadecimal numeral system, Converting  to THE decimal numeral system excited.")
+                            Text("Write the scrambled letters on the first box to create a hexadecimal numeral system, Converting  to the decimal numeral system excited.")
                                 .padding(.top)
                                 .font(Font.system(size: 16))
                                 .kerning(1.6)
@@ -237,7 +237,7 @@ struct frameStructA: View {
                 .overlay(
                     TextField("   ", text: $someText)
                         .foregroundColor(isCorrect ? .black : .red) // Set text color based on correctness
-                        .font(Font.custom("AnonymousPro-Bold", size: 35))
+                        .font(Font.custom("AnonymousPro-Bold.ttf", size: 35))
                         .fontWeight(.bold)
                         .padding(.leading, 30)
                         .padding(.top)

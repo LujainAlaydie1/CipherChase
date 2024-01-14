@@ -114,14 +114,14 @@ struct MainPage: View {
                                 )
                             )
                         
-                        Capsule()
-                            .fill(Color.logocolor)
-                            .frame(width: 180 ,height: 24)
-                            .overlay(
-                                Text("Crack the Case")
-                                    .font(Font.custom("PixelifySans-Bold", size: 16))
-                                    .foregroundStyle(.secondarys)
-                            )
+//                        Capsule()
+//                            .fill(Color.logocolor)
+//                            .frame(width: 180 ,height: 24)
+//                            .overlay(
+//                                Text("Crack the Case")
+//                                    .font(Font.custom("PixelifySans-Bold", size: 16))
+//                                    .foregroundStyle(.secondarys)
+//                            )
                         
                         Spacer()
                         
@@ -239,9 +239,9 @@ struct MainPage: View {
  struct BlueButton: ButtonStyle {
      func makeBody(configuration: Configuration) -> some View {
         configuration.label
+             .frame(width: 160, height: 50)
             .padding()
             .background(Color.logocolor)
-            .frame(width: 190, height: 50)
             .foregroundStyle(.secondarys)
             .font(Font.system(size: 32))
             .cornerRadius(15)

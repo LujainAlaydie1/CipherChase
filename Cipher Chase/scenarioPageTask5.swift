@@ -16,7 +16,7 @@ struct scenarioPageTask5: View {
     
     @State private var someText = ""
     @State var animateTitle: String = ""
-    @State var finalText: String = "Prepare, Decoders, for the Binary Battle awaits.In this realm  of zeros and ones, Decode my binary message to reveal a seven-letter word. Your coding prowess is your weapon, let the unraveling begin. Type the decrypted word to unlock the secrets within the domain."
+    @State var finalText: String = "Prepare, Decoders, for the Binary Battle awaits. In this realm of zeros and ones, Decode my binary message to reveal a seven-letter word. Your coding prowess is your weapon, let the unraveling begin. Type the decrypted word to unlock the secrets within The Phoenix's domain."
     
     
     @State private var enteredLetters: [String] = ["","","","","","",""]

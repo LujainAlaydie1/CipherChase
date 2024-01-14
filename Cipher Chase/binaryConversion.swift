@@ -14,7 +14,7 @@ struct binaryConversion: View {
     @State var isActive: Bool = false
     @State var animateTitle: String = ""
     @State var finalText: String = """
-   In the Cryptic Code Chamber, the holographic terminal presents a series of binary addition equations. The elite coding team's task is to calculate the binary sum for each equation correctly. Successfully solving these binary addition challenges will unlock crucial fragments of information about The Encoder's encrypted messages, bringing the team closer to unraveling the mysteries held within "Project_Phoenix."
+  In the Cryptic Code Chamber, the holographic terminal presents a series of binary addition equations. The elite coding team's task is to calculate the binary sum for each equation correctly. Successfully solving these binary addition challenges will unlock crucial fragments of information about The Encoder's encrypted messages, bringing the team closer to unraveling the mysteries held within "Project_Phoenix."
  """
     
     @State var showTextFieldAlert : Bool = false
@@ -93,6 +93,10 @@ struct binaryConversion: View {
         } else {
         }
     }
+    
+  
+    
+    
     @EnvironmentObject var router: Router
     @State private var isShowingPopup = false
     @State private var progress: Double = 4 / 6
@@ -160,7 +164,7 @@ struct binaryConversion: View {
                                                     .padding(.top, geometry.size.height / -7)
                                                 Text("+")
                                                     .foregroundColor(.white)
-                                                    .font(Font.custom("AnonymousPro-Regular", size: 32))
+                                                    .font(Font.custom("AnonymousPro-Regular.ttf", size: 32))
                                                     .padding(.top, geometry.size.height / -7)
                                                 
                                                     .padding(.bottom, geometry.size.height / 9)
@@ -183,7 +187,7 @@ struct binaryConversion: View {
                                                 
                                                 Text("=")
                                                     .foregroundColor(.white)
-                                                    .font(Font.custom("AnonymousPro-Regular", size: 32))
+                                                    .font(Font.custom("AnonymousPro-Regular.ttf", size: 32))
                                                     .padding(.bottom, geometry.size.height / 5)
                                                     .padding(.top, geometry.size.height / -7)
                                                 

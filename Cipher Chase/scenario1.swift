@@ -34,30 +34,24 @@ struct scenario1: View {
     @State private var someText = ""
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-    The riddle alludes to the binary language, and keen-eyed players discern a binary sequence on the holographic note. Converting these binaries into ASCII, they uncover the word "59" the password.
-
-    With seconds ticking away, they swiftly input "59" into the laptop. As the timer hits zero, the screen flickers, emitting a satisfying hum. The encrypted message transforms:
-   
- "Well done, decoders. The journey has just begun. Seek the heart of logic, where bugs await their demise."
-
-    With the laptop unlocked, the elite coding team ventures forth to unravel the mysteries within the academy's virtual realm.
-"""
+    The team cracks the riddle, discovering a binary sequence on a holographic note, converting it to reveal the password "59." With seconds ticking, they input it into the laptop, unlocking a message prompting them to seek the heart of logic.
     
-     let secondFianl = """
-As the Elite Coding Team unlocks the academy's entrance laptop, a holographic map reveals the next destination: the main server room. Neon code cascades as they enter, greeted by an unsettling hum of malfunctioning servers.
-"The heart of the academy holds secrets and chaos. Debug the code to reveal the path. Your coding prowess is needed to restore order."
-Approaching the central server, lines of buggy code await. A holographic script indicates that debugging is the key to uncover the next clue.
+The Elite Coding Team proceeds to the main server room, encountering malfunctioning servers and a directive to debug the code for the next clue.
+    
+The screen flickers, emitting a satisfying hum. The encrypted message transforms:
+    
+"Well done, decoders. The journey has just begun. Seek the heart of logic, where bugs await their demise."
 """
     
     
     
-    @State var buttonText = "Next"
+    @State var buttonText = "Solve"
     
     @EnvironmentObject var router: Router
 
     func styledText(for text: String) -> Text {
         let pattern = try! NSRegularExpression(pattern: """
-                                                    ("Well done, decoders. The journey has just begun. Seek the heart of logic, where bugs await their demise.")|(Elite Coding Team)
+                                                    ("Well done, decoders. The journey has just begun. Seek the heart of logic, where bugs await their demise.")|(The Elite Coding Team)
                                                     """)
         let matches = pattern.matches(in: text, range: NSRange(text.startIndex..., in: text))
 
@@ -129,26 +123,11 @@ Approaching the central server, lines of buggy code await. A holographic script 
                                                 // Perform different actions based on the click count
                                                 switch self.clickCount {
                                                 case 1:
-                                                    self.finalText = ""
-                                                    self.finalText = """
-                                                    As the Elite Coding Team unlocks the academy's entrance laptop, a holographic map reveals the next destination: the main server room. Neon code cascades as they enter, greeted by an unsettling hum of malfunctioning servers.
-                                                    
-                                                    "The heart of the academy holds secrets and chaos. Debug the code to reveal the path. Your coding prowess is needed to restore order."
-                                                    
-                                                    Approaching the central server, lines of buggy code await. A holographic script indicates that debugging is the key to uncover the next clue.
-                                                    """
 
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                                        self.animateTitle = ""
-                                                        self.indexValue = 0
-                                                        self.startAnimation()
-                                                    }
                                                     buttonText = "Solve"
-                                              
-                                                    
-                                                case 2:
                                                     router.navigate(to: .task2)
-                                                    // Add more cases for additional clicks if needed
+
+                                    
                                                     
                                                 default:
                                                     // Default action for subsequent clicks
@@ -157,7 +136,7 @@ Approaching the central server, lines of buggy code await. A holographic script 
                                                 }
                                             }) {
                                                 Text(buttonText)
-                                                    .font(Font.custom("PixelifySans-Bold", size: 22))
+                                                    .font(Font.custom("PixelifySans-Bold.ttf", size: 22))
                                                     .foregroundColor(.secondarys)
                                                     .frame(width: geometry.size.width / 4, height: geometry.size.height / 13)
                                                     .background(

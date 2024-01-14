@@ -14,7 +14,7 @@ struct task2: View {
     @State private var clickCount = 0
     @State var animateTitle: String = ""
     @State var finalText: String =  """
-    ""In the labyrinth of code, where bugs dance in the shadows, your path lies in the unexpected. Seek the anomaly, click on the line that echoes with the error, and unravel the next clue hidden within the missteps of the code.""
+   "In the labyrinth of code, where bugs dance in the shadows, your path lies in the unexpected. Seek the anomaly, click on the line that echoes with the error, and unravel the next clue hidden within the missteps of the code."
 """
     
     @State private var navigateToNextView = false
